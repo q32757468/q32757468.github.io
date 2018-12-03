@@ -21,7 +21,10 @@
   <entry>
     <title><![CDATA[test]]></title>
     <url>%2F2018%2F12%2F02%2Ftest-1%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[����һ���µĲ���!]]></content>
+      <categories>
+        <category>ѧϰ�ʼ�</category>
+      </categories>
       <tags>
         <tag>1</tag>
         <tag>2</tag>
