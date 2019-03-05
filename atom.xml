@@ -81,7 +81,7 @@
     <link href="http://yoursite.com/2018/12/02/test-1/"/>
     <id>http://yoursite.com/2018/12/02/test-1/</id>
     <published>2018-12-02T10:00:41.000Z</published>
-    <updated>2018-12-03T04:59:40.975Z</updated>
+    <updated>2019-03-05T11:57:10.340Z</updated>
     
     <content type="html"><![CDATA[<p>����һ���µĲ���!</p>]]></content>
     
@@ -95,7 +95,7 @@
     
     </summary>
     
-      <category term="ѧϰ�ʼ�" scheme="http://yoursite.com/categories/%D1%A7%CF%B0%EF%BF%BD%CA%BC%EF%BF%BD/"/>
+      <category term="测试" scheme="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95/"/>
     
     
       <category term="1" scheme="http://yoursite.com/tags/1/"/>
