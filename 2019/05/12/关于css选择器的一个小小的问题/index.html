@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="前言 昨天在写一个页面的时候，写到css样式的时候，出现了一个问题,让我有一开始有点想不明白，后面想明白了，记录一下。  问题情况： 这是html代码 12345&amp;lt;div class=&quot;father&quot;&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li class=&quot;son&quot;&amp;gt;&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  这是css代码 1">
+<meta name="description" content="前言 昨天在写一个页面的时候，写到css样式的时候，出现了一个问题,让我有一开始有点想不明白，后面明白了，记录一下。  问题情况： 这是html代码 12345&amp;lt;div class=&quot;father&quot;&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li class=&quot;son&quot;&amp;gt;&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  这是css代码 12">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于css选择器的一个小小的问题">
 <meta property="og:url" content="https://q32757468.github.io/2019/05/12/关于css选择器的一个小小的问题/index.html">
 <meta property="og:site_name" content="ranshan丶">
-<meta property="og:description" content="前言 昨天在写一个页面的时候，写到css样式的时候，出现了一个问题,让我有一开始有点想不明白，后面想明白了，记录一下。  问题情况： 这是html代码 12345&amp;lt;div class=&quot;father&quot;&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li class=&quot;son&quot;&amp;gt;&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  这是css代码 1">
+<meta property="og:description" content="前言 昨天在写一个页面的时候，写到css样式的时候，出现了一个问题,让我有一开始有点想不明白，后面明白了，记录一下。  问题情况： 这是html代码 12345&amp;lt;div class=&quot;father&quot;&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li class=&quot;son&quot;&amp;gt;&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  这是css代码 12">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-12T02:38:42.787Z">
+<meta property="og:updated_time" content="2019-05-14T07:11:22.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于css选择器的一个小小的问题">
-<meta name="twitter:description" content="前言 昨天在写一个页面的时候，写到css样式的时候，出现了一个问题,让我有一开始有点想不明白，后面想明白了，记录一下。  问题情况： 这是html代码 12345&amp;lt;div class=&quot;father&quot;&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li class=&quot;son&quot;&amp;gt;&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  这是css代码 1">
+<meta name="twitter:description" content="前言 昨天在写一个页面的时候，写到css样式的时候，出现了一个问题,让我有一开始有点想不明白，后面明白了，记录一下。  问题情况： 这是html代码 12345&amp;lt;div class=&quot;father&quot;&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li class=&quot;son&quot;&amp;gt;&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  这是css代码 12">
 
 
 
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  339
+                  346
                 </span>
               
 
@@ -417,7 +417,7 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>昨天在写一个页面的时候，写到css样式的时候，出现了一个问题,让我有一开始有点想不明白，后面想明白了，记录一下。</p>
+<p>昨天在写一个页面的时候，写到css样式的时候，出现了一个问题,让我有一开始有点想不明白，后面明白了，记录一下。</p>
 </blockquote>
 <h3 id="问题情况："><a href="#问题情况：" class="headerlink" title="问题情况："></a>问题情况：</h3><ul>
 <li><p>这是html代码</p>
@@ -427,7 +427,7 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:none; </span><br><span class="line">    <span class="comment">/* 此时这个div块中的所有内容都将不显示 */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:block;</span><br><span class="line">    <span class="comment">/* 起初我认为此时这个li中放的所有内容都应该显示，但是我在li中放的图片并没有显示，我就去查看控制台的样式，发现在这个li中的样式是有block这个属性但是并没有生效。 */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.father</span> <span class="selector-tag">ul</span> <span class="selector-class">.son</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:block;</span><br><span class="line">    <span class="comment">/* 后面我尝试着这样写，却发现这下图片就显示出来了 ，随后并猜测是选择器优先级的问题，随即查阅资料，发现组合选择器的优先级为成员选择器的权重相加，只写一个类选择器干不过上面的多个选择器权重相加，所以多组合一些就好了，或者用!important 来拉满。*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>虽然以前看到过选择器优先级相关的知识，但是还没有接触过很多这种情况，以后要注意！</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>选择器的权重问题。<br>虽然以前看到过选择器优先级相关的知识，但是还没有接触过很多这种情况，以后要注意！</p>
 
       
     </div>
@@ -587,7 +587,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -675,7 +675,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.5k字</span>
+  <span class="post-count">博客全站共11k字</span>
 </div>-->
 
         
