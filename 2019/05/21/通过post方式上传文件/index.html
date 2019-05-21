@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="前言 昨天在写一个页面的时候，写到css样式的时候，出现了一个问题,让我有一开始有点想不明白，后面明白了，记录一下。  问题情况： 这是html代码 12345&amp;lt;div class=&quot;father&quot;&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li class=&quot;son&quot;&amp;gt;&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  这是css代码 12">
+<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这次学习一下通过表单得到post方式来向后端上传文件，以及使用表单来上传文件的注意点及注意事项。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于css选择器的一个小小的问题">
-<meta property="og:url" content="https://q32757468.github.io/2019/05/12/关于css选择器的一个小小的问题/index.html">
+<meta property="og:title" content="通过post方式上传文件">
+<meta property="og:url" content="https://q32757468.github.io/2019/05/21/通过post方式上传文件/index.html">
 <meta property="og:site_name" content="ranshan丶">
-<meta property="og:description" content="前言 昨天在写一个页面的时候，写到css样式的时候，出现了一个问题,让我有一开始有点想不明白，后面明白了，记录一下。  问题情况： 这是html代码 12345&amp;lt;div class=&quot;father&quot;&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li class=&quot;son&quot;&amp;gt;&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  这是css代码 12">
+<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这次学习一下通过表单得到post方式来向后端上传文件，以及使用表单来上传文件的注意点及注意事项。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-14T07:11:22.782Z">
+<meta property="og:updated_time" content="2019-05-21T03:19:52.215Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于css选择器的一个小小的问题">
-<meta name="twitter:description" content="前言 昨天在写一个页面的时候，写到css样式的时候，出现了一个问题,让我有一开始有点想不明白，后面明白了，记录一下。  问题情况： 这是html代码 12345&amp;lt;div class=&quot;father&quot;&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li class=&quot;son&quot;&amp;gt;&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  这是css代码 12">
+<meta name="twitter:title" content="通过post方式上传文件">
+<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这次学习一下通过表单得到post方式来向后端上传文件，以及使用表单来上传文件的注意点及注意事项。">
 
 
 
@@ -121,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="https://q32757468.github.io/2019/05/12/关于css选择器的一个小小的问题/">
+  <link rel="canonical" href="https://q32757468.github.io/2019/05/21/通过post方式上传文件/">
 
 
 
@@ -137,7 +137,7 @@
   </script>
 
 
-  <title>关于css选择器的一个小小的问题 | ranshan丶</title>
+  <title>通过post方式上传文件 | ranshan丶</title>
   
 
 
@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://q32757468.github.io/2019/05/12/关于css选择器的一个小小的问题/">
+    <link itemprop="mainEntityOfPage" href="https://q32757468.github.io/2019/05/21/通过post方式上传文件/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hsl">
@@ -328,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于css选择器的一个小小的问题</h1>
+          <h1 class="post-title" itemprop="name headline">通过post方式上传文件</h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-12T10:15:53+08:00">
-                2019-05-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-21T10:21:09+08:00">
+                2019-05-21
               </time>
             
 
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  346
+                  755
                 </span>
               
 
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -417,17 +417,23 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>昨天在写一个页面的时候，写到css样式的时候，出现了一个问题,让我有一开始有点想不明白，后面明白了，记录一下。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这次学习一下通过表单得到post方式来向后端上传文件，以及使用表单来上传文件的注意点及注意事项。<br><a id="more"></a><br>先上代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"post上传文件.php"</span> <span class="attr">method</span>=<span class="string">"POST"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"upFile"</span> <span class="attr">id</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">name</span>=<span class="string">"tj"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h3 id="问题情况："><a href="#问题情况：" class="headerlink" title="问题情况："></a>问题情况：</h3><ul>
-<li><p>这是html代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>这是css代码</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:none; </span><br><span class="line">    <span class="comment">/* 此时这个div块中的所有内容都将不显示 */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:block;</span><br><span class="line">    <span class="comment">/* 起初我认为此时这个li中放的所有内容都应该显示，但是我在li中放的图片并没有显示，我就去查看控制台的样式，发现在这个li中的样式是有block这个属性但是并没有生效。 */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.father</span> <span class="selector-tag">ul</span> <span class="selector-class">.son</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:block;</span><br><span class="line">    <span class="comment">/* 后面我尝试着这样写，却发现这下图片就显示出来了 ，随后并猜测是选择器优先级的问题，随即查阅资料，发现组合选择器的优先级为成员选择器的权重相加，只写一个类选择器干不过上面的多个选择器权重相加，所以多组合一些就好了，或者用!important 来拉满。*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<ul>
+<li>这里之所以使用post方式上传而不使用get方式上传是因为get方式上传有文件大小方面的限制，最多2000个字符，所以使用post</li>
+<li>很正常的一个表单，设置了控件类型以及与后端交互时要用到的name</li>
+<li>但是要注意的是上传文件时除了要设置表单类型为 <code>file</code>之外，还需要给form添加一个<code>enctype</code>属性，并且把它的值设为<code>multipart/form-data</code>，只有这样才能正常上传。</li>
 </ul>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>选择器的权重问题。<br>虽然以前看到过选择器优先级相关的知识，但是还没有接触过很多这种情况，以后要注意！</p>
+<p>我们再来看看php部分的代码：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">print_r($_FILES);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">'&lt;br&gt;'</span>;</span><br><span class="line">$fileInfo=$_FILES[<span class="string">'upFile'</span>];</span><br><span class="line">print_r($fileInfo);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>这个时候我们就不能再使用post方式来获取文件的内容了，我们需要用file方式。<br>我么再来看看打印的结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Array ( [tj] =&gt; 提交 ) //这个时候post变量获取到的东西就不是我们想要的东西了。</span><br><span class="line">Array ( [upFile] =&gt; Array ( [name] =&gt; 后面问题.png [type] =&gt; image/png [tmp_name] =&gt; E:\xampp\tmp\phpDC76.tmp [error] =&gt; 0 [size] =&gt; 32458 ) )  //而通过file变量获取到的数组里面就有我们想要的东西</span><br><span class="line">Array ( [name] =&gt; 后面问题.png [type] =&gt; image/png [tmp_name] =&gt; E:\xampp\tmp\phpDC76.tmp [error] =&gt; 0 [size] =&gt; 32458 )</span><br><span class="line">//然后再从数组中取出我们想要的文件，就可以得到文件的信息。</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>但是其实这个时候也不是我们想要的结果，因为我们会发现 <code>E:\xampp\tmp\</code>这个目录下是空的，并没有我们上传的文件</li>
+<li>这是因为这其实是一个临时文件夹，如果我们需要永久保存我们想要的内容我们需要将文件保存到我们自己建立的一个文件夹中。</li>
+<li>这个时候我们就需要使用到这个函数<code>move_uploaded_file(file,newloc)</code><br>第一个参数规定文件的原路径，第二个参数规定文件的新路径已经文件名。</li>
+</ul>
+<p>下面将代码改进一下：<br>加上一行代码：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">move_uploaded_file($fileInfo[<span class="string">'tmp_name'</span>],<span class="string">"./test_imgs/"</span>.$fileInfo[<span class="string">'name'</span>]);</span><br></pre></td></tr></table></figure></p>
+<p>这个时候我们再看设置的那个新路径，就已经成功将文件移动过来了。</p>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>上传文件的表单与其他表单有些许不一样，要多注意，获取内容的方法也不太一样，并且要注意<code>move_uploaded_file</code>函数的使用，第二个参数写相对路径的时候，如果是相对与当前路径开始的话一定不能遗漏了<code>./</code>来表示当前路径，比如我刚开始这样写就报错：<code>&quot;test_imgs/&quot;</code>,而这样写就是对的:<code>&quot;./test_imgs/&quot;</code>所以以后要多注意。</p>
 
       
     </div>
@@ -463,8 +469,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/10/jQuery学习（核心函数）/" rel="next" title="jQuery学习（核心函数）">
-                <i class="fa fa-chevron-left"></i> jQuery学习（核心函数）
+              <a href="/2019/05/20/jQuery中eq与get的区别/" rel="next" title="jQuery中eq与get的区别">
+                <i class="fa fa-chevron-left"></i> jQuery中eq与get的区别
               </a>
             
           </div>
@@ -473,8 +479,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/12/jQuery学习（css样式操作）/" rel="prev" title="jQuery学习（css样式操作）">
-                jQuery学习（css样式操作） <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/21/初识cookie/" rel="prev" title="初识cookie">
+                初识cookie <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -631,7 +637,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题情况："><span class="nav-number">2.</span> <span class="nav-text">问题情况：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结："><span class="nav-number">2.</span> <span class="nav-text">总结：</span></a></li></ol></div>
             
 
           </div>
