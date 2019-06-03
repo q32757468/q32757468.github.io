@@ -81,16 +81,17 @@
 
 
 
-<meta name="description" content="你看见了吗，那有一座山。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ranshan丶">
-<meta property="og:url" content="https://q32757468.github.io/archives/index.html">
+<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;今天老师上课给我们讲了一下php中的翻页功能的实现，，主要是通过数据库中的limit方法实现，这一点和我预想的差不多，但是通过给页面设置id的这种办法是我没有想到的，我一开始的设想是，能不能作到不用给每个页面设置一个id，根据这个id进行跳转，而是直接设置一个变量，当进行翻页的时候这个变量的数值发生变化，然后">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php中页面分页的实现">
+<meta property="og:url" content="https://q32757468.github.io/2019/06/03/php中页面分页的实现/index.html">
 <meta property="og:site_name" content="ranshan丶">
-<meta property="og:description" content="你看见了吗，那有一座山。">
+<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;今天老师上课给我们讲了一下php中的翻页功能的实现，，主要是通过数据库中的limit方法实现，这一点和我预想的差不多，但是通过给页面设置id的这种办法是我没有想到的，我一开始的设想是，能不能作到不用给每个页面设置一个id，根据这个id进行跳转，而是直接设置一个变量，当进行翻页的时候这个变量的数值发生变化，然后">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-03T13:33:12.477Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ranshan丶">
-<meta name="twitter:description" content="你看见了吗，那有一座山。">
+<meta name="twitter:title" content="php中页面分页的实现">
+<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;今天老师上课给我们讲了一下php中的翻页功能的实现，，主要是通过数据库中的limit方法实现，这一点和我预想的差不多，但是通过给页面设置id的这种办法是我没有想到的，我一开始的设想是，能不能作到不用给每个页面设置一个id，根据这个id进行跳转，而是直接设置一个变量，当进行翻页的时候这个变量的数值发生变化，然后">
 
 
 
@@ -120,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="https://q32757468.github.io/archives/">
+  <link rel="canonical" href="https://q32757468.github.io/2019/06/03/php中页面分页的实现/">
 
 
 
@@ -136,7 +137,7 @@
   </script>
 
 
-  <title>归档 | ranshan丶</title>
+  <title>php中页面分页的实现 | ranshan丶</title>
   
 
 
@@ -155,7 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://q32757468.github.io" class="github-corner" aria-label="View source on GitHub">
     <svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff;
@@ -296,391 +297,238 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://q32757468.github.io/2019/06/03/php中页面分页的实现/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hsl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ranshan丶">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">php中页面分页的实现</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-03T21:01:46+08:00">
+                2019-06-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 29 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/03/php中页面分页的实现/" itemprop="url">
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">php中页面分页的实现</span>
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.2k
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-03T21:01:46+08:00" content="2019-06-03">
-          06-03
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/27/写一个简单的五星评分系统/" itemprop="url">
-              
-                <span itemprop="name">写一个简单的五星评分系统</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-27T18:42:06+08:00" content="2019-05-27">
-          05-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/26/hash的使用/" itemprop="url">
-              
-                <span itemprop="name">HTML中DOM的hash属性的使用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-26T15:53:50+08:00" content="2019-05-26">
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天老师上课给我们讲了一下php中的翻页功能的实现，，主要是通过数据库中的limit方法实现，这一点和我预想的差不多，但是通过给页面设置id的这种办法是我没有想到的，我一开始的设想是，能不能作到不用给每个页面设置一个id，根据这个id进行跳转，而是直接设置一个变量，当进行翻页的时候这个变量的数值发生变化，然后根据这个变量来获取数据库中的内容。这个想法应该可以实现，但是可能会比较麻烦，因为在php中还是必须要刷新页面才能更新数据的，所以目前来看还是这种方法应该是最好的，那么就来看看究竟是怎么实现分页功能的。<br><a id="more"></a></p>
+</blockquote>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><ul>
+<li><p>先是连接数据库：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// 一个正常的连接数据库的页面</span></span><br><span class="line">$conn=mysqli_connect(<span class="string">'localhost'</span>,<span class="string">'root'</span>,<span class="string">''</span>,<span class="string">'test'</span>) <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">'失败'</span>);</span><br><span class="line">mysqli_set_charset($conn,<span class="string">'utf8'</span>);</span><br><span class="line">$res=mysqli_query($conn,<span class="string">'select * from stu'</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实现功能的页面</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;table&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">    &lt;td&gt;id&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;姓名&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;年龄&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;性别&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    <span class="meta">&lt;?php</span></span><br><span class="line">        <span class="keyword">include</span> <span class="string">'conn.php'</span>;</span><br><span class="line">        $data_count=mysqli_num_rows($res);  <span class="comment">//获取数据表中有多少条数据</span></span><br><span class="line">        $data_num=<span class="number">2</span>; <span class="comment">//设置一页显示多少条数据</span></span><br><span class="line">        $id=<span class="keyword">empty</span>($_GET[<span class="string">'id'</span>])?<span class="number">1</span>:$_GET[<span class="string">'id'</span>]; <span class="comment">//判断当前页面的url栏中的id参数是否为空，如果为空则默认为1，否则则为url中id的数值</span></span><br><span class="line">        $pg_count=ceil($data_count/$data_num);  <span class="comment">//计算总共有多少页，ceil的用法是往上取整</span></span><br><span class="line">        <span class="comment">//通过limit来获取每一个页面该显示的数据</span></span><br><span class="line">        $datas=mysqli_query($conn,<span class="string">"select * from stu limit "</span>.($id<span class="number">-1</span>)*<span class="number">2</span> . <span class="string">','</span>. $data_num);</span><br><span class="line">        <span class="comment">//用来排错的方法</span></span><br><span class="line">        <span class="comment">// if (!$datas) &#123;</span></span><br><span class="line">        <span class="comment">//     printf("Error: %s\n", mysqli_error($conn));</span></span><br><span class="line">        <span class="comment">//     exit(); </span></span><br><span class="line">        <span class="comment">//     &#125;</span></span><br><span class="line">        <span class="comment">// 输出最终获取到的页面的数据</span></span><br><span class="line">        <span class="keyword">while</span>($row=mysqli_fetch_array($datas))&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">"&lt;tr&gt;&lt;td&gt;$row[id]&lt;/td&gt;&lt;td&gt;$row[name]&lt;/td&gt;&lt;td&gt;$row[age]&lt;/td&gt;&lt;td&gt;$row[sex]&lt;/td&gt;&lt;/tr&gt;"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="meta">?&gt;</span>  </span><br><span class="line">    &lt;!-- 在href中设置id的值 --&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">    &lt;td&gt;&lt;a href=<span class="string">"?id=1"</span>&gt;首页&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">    实现上一页的功能，先判断是否是第一页，否则id<span class="number">-1</span></span><br><span class="line">    &lt;td&gt;&lt;a href=<span class="string">"?id=&lt;?php echo $id==1?1:$id-1 ?&gt;"</span>&gt;上一页&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">    实现上一页的功能，先判断是否是最后一页，否则id+<span class="number">1</span></span><br><span class="line">    &lt;td&gt;&lt;a href=<span class="string">"?id=&lt;?php echo $id==$pg_count?$pg_count:$id+1 ?&gt;"</span>&gt;下一页&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;&lt;a href=<span class="string">"?id=&lt;?php echo $pg_count ?&gt;  "</span>&gt;尾页&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;/table&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>其实代码还是很好理解的，但是自己在写的过程中还是遇到了一些问题，下面记录一下这些问题</p>
+<h3 id="我自己在编写过程中遇到的一些问题"><a href="#我自己在编写过程中遇到的一些问题" class="headerlink" title="我自己在编写过程中遇到的一些问题"></a>我自己在编写过程中遇到的一些问题</h3><p>首先就是在我基本上已经写完代码之后一测试就爆出了一个警告，并且最终没有出现我想要的结果，于是我上网查询解决办法，于是找到了下面这一段代码：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!$datas) &#123;</span><br><span class="line">        printf(<span class="string">"Error: %s\n"</span>, mysqli_error($conn));</span><br><span class="line">        <span class="keyword">exit</span>(); </span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
+<p>通过上述代码就没有再出现警告了，而是直接报错，提示问题在哪，我就在附近排查问题，</p>
+<p><code>$datas=mysqli_query($conn,&quot;select * from stu limit ($id-1)*2 , $data_num&quot;);</code></p>
+<p>我一开始想会不会因为是没有拼接字符串的原因,于是我修改代码改成后面是拼接字符串的形式。</p>
+<p><code>$datas=mysqli_query($conn,&quot;select * from stu limit&quot;.($id-1)*2 . &#39;,&#39;. $data_num);</code></p>
+<p>但是一直都是出现一样的错误提示，后面经过我的测试发现是<code>$datas</code>中没有数据，但是我直接不写变量，把变量写死就能出来数据。<br>反复比较自己那部分的代码和老师给的代码，但是直接比对并没有发现什么不一样，后面复制老师的这行代码稍加修改结果却是正常的。<br>最后我终于发现了问题所在，其实我尝试的两种写法都存在问题：</p>
+<ul>
+<li>首先是我一开始没有拼接变量，而是直接将变量写在字符串之中，我发现也是数据库在处理语句的时候出现的问题，我猜测应该是在使用变量的时候变量会把前面的空格给吞掉，导致语句执行错误。</li>
+<li>后面我尝试拼接字符串的时候又出现了问题是因为我在<code>limit</code>后面少拼接了一个空格导致语句执行出错。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>写php还是不是特别的熟练，所以经常出现各种问题，所以要总结错误，加深印象，以后越写越熟练以后的错误就会越来越少</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/26/Ajax的学习/" itemprop="url">
-              
-                <span itemprop="name">Ajax的学习</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-26T14:44:01+08:00" content="2019-05-26">
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/23/关于使用flex布局遇到的一个小问题/" itemprop="url">
-              
-                <span itemprop="name">关于使用flex布局遇到的一个小问题</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-23T18:52:16+08:00" content="2019-05-23">
-          05-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/21/初识cookie/" itemprop="url">
-              
-                <span itemprop="name">初识cookie</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-21T15:24:59+08:00" content="2019-05-21">
-          05-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/21/通过post方式上传文件/" itemprop="url">
-              
-                <span itemprop="name">通过post方式上传文件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-21T10:21:09+08:00" content="2019-05-21">
-          05-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/20/jQuery中eq与get的区别/" itemprop="url">
-              
-                <span itemprop="name">jQuery中eq与get的区别</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-20T19:57:14+08:00" content="2019-05-20">
-          05-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/18/flex使用的小demo/" itemprop="url">
-              
-                <span itemprop="name">flex使用的小demo</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-18T10:20:25+08:00" content="2019-05-18">
-          05-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/18/CSS3-flex的使用/" itemprop="url">
-              
-                <span itemprop="name">CSS3_flex的使用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-18T09:44:04+08:00" content="2019-05-18">
-          05-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-smile-o"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/27/写一个简单的五星评分系统/" rel="next" title="写一个简单的五星评分系统">
+                <i class="fa fa-chevron-left"></i> 写一个简单的五星评分系统
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -688,6 +536,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzAzMS8xOTU3Nw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -710,8 +567,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -762,6 +628,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我自己在编写过程中遇到的一些问题"><span class="nav-number">3.</span> <span class="nav-text">我自己在编写过程中遇到的一些问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -920,6 +802,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -948,6 +834,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
