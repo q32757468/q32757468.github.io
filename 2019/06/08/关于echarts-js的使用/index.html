@@ -83,7 +83,7 @@
 
 <meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近在做期末的课程设计的时候需要做一个后台管理界面，所以需要用到一些图标插件，经过搜索我发现有好多的图标插件，最终我决定要使用echarts.js，其中一个很重要的原因就是它是有国内的百度的团队主导开发的一个项目，所以有中文文档，方便我查阅，文档查阅请看这里">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于echarts.js的使用">
+<meta property="og:title" content="Echarts.js的学习">
 <meta property="og:url" content="https://q32757468.github.io/2019/06/08/关于echarts-js的使用/index.html">
 <meta property="og:site_name" content="ranshan丶">
 <meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近在做期末的课程设计的时候需要做一个后台管理界面，所以需要用到一些图标插件，经过搜索我发现有好多的图标插件，最终我决定要使用echarts.js，其中一个很重要的原因就是它是有国内的百度的团队主导开发的一个项目，所以有中文文档，方便我查阅，文档查阅请看这里">
@@ -93,9 +93,9 @@
 <meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/b6Iklzz*774qdSNWl1NPw0DH2g2.T361lGsKq4nCuYo!/b/dMUAAAAAAAAA&bo=WwXhAQAAAAADB5w!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/cwvwewTqRW1kd5KKMudwqewDGl5Yn5L2ioeJNOpkgfI!/b/dDYBAAAAAAAA&bo=HgXKAQAAAAADB*I!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/NHVrw*69j8C.LH4Bm6taq7Q5P3ZHuAXS.dLd8hQlDgU!/b/dLgAAAAAAAAA&bo=kgUgAgAAAAADB5c!&rf=viewer_4">
-<meta property="og:updated_time" content="2019-06-11T14:14:20.404Z">
+<meta property="og:updated_time" content="2019-06-13T10:50:26.371Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于echarts.js的使用">
+<meta name="twitter:title" content="Echarts.js的学习">
 <meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近在做期末的课程设计的时候需要做一个后台管理界面，所以需要用到一些图标插件，经过搜索我发现有好多的图标插件，最终我决定要使用echarts.js，其中一个很重要的原因就是它是有国内的百度的团队主导开发的一个项目，所以有中文文档，方便我查阅，文档查阅请看这里">
 <meta name="twitter:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/modlggoXIDSu1a2S0dKlFgZtosSITXM1BmkHMFKwD8w!/b/dMAAAAAAAAAA&bo=gAcSBAAAAAADB7M!&rf=viewer_4">
 
@@ -143,7 +143,7 @@
   </script>
 
 
-  <title>关于echarts.js的使用 | ranshan丶</title>
+  <title>Echarts.js的学习 | ranshan丶</title>
   
 
 
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于echarts.js的使用</h1>
+          <h1 class="post-title" itemprop="name headline">Echarts.js的学习</h1>
         
 
         <div class="post-meta">
@@ -385,7 +385,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.9k
+                  4.5k
                 </span>
               
 
@@ -401,7 +401,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  15
+                  17
                 </span>
               
             </div>
@@ -485,9 +485,9 @@
 <ul>
 <li><strong>left/right/top/bottom/width/height 定位方式：</strong><br>例如：<code>{left: 23, height: 400}</code>，可以不写单位，还可以写成百分比的形式，<code>{left: 30%, height: 40%}</code><br>可以设置 <code>left: &#39;center&#39;</code>，表示水平居中。<br>可以设置 <code>top: &#39;middle&#39;</code>，表示垂直居中。</li>
 </ul>
-<p><strong>在横向，left、right、width 三个量中，只需两个量有值即可，因为任两个量可以决定组件的位置和大小，例如 left 和 right 或者 right 和 width 都可以决定组件的位置和大小。 纵向，top、bottom、height 三个量，和横向类同不赘述。</strong></p>
+<p>在横向，left、right、width 三个量中，只需两个量有值即可，因为任两个量可以决定组件的位置和大小，例如 left 和 right 或者 right 和 width 都可以决定组件的位置和大小。 纵向，top、bottom、height 三个量，和横向类同不赘述。</p>
 <ul>
-<li>center / radius 定位方式：<br>center<br>是一个数组，表示 [x, y]，其中，x、y可以是『绝对值』或者『百分比』，含义和前述相同。<br>radius<br>是一个数组，表示 [内半径, 外半径]，其中，内外半径可以是『绝对值』或者『百分比』，含义和前述相同。<br>在自适应容器大小时，百分比设置是很有用的。</li>
+<li><strong>center / radius 定位方式：</strong><br>center<br>是一个数组，表示 [x, y]，其中，x、y可以是『绝对值』或者『百分比』，含义和前述相同。<br>radius<br>是一个数组，表示 [内半径, 外半径]，其中，内外半径可以是『绝对值』或者『百分比』，含义和前述相同。<br>在自适应容器大小时，百分比设置是很有用的。</li>
 </ul>
 <h4 id="图表的方向"><a href="#图表的方向" class="headerlink" title="图表的方向"></a>图表的方向</h4><p>在echarts中有一些图表可能会很长，在pc端可以较好的显示，在移动端就不一定能够很好的显示了，所以就需要设置他们的方向：<br>横纵向布局的设置，一般在『组件』或者『系列』的 <strong>orient</strong> 或者 <strong>layout</strong> 配置项上，设置为 <code>&#39;horizontal&#39;</code> 或者 <code>&#39;vertical&#39;</code>。</p>
 <h4 id="实现响应式"><a href="#实现响应式" class="headerlink" title="实现响应式"></a>实现响应式</h4><p>前面有说到echarts中实现响应式是通过类似媒体查询来实现的，这就是echarts中的  <strong>Media Query</strong><br>在option中Media Query 的基本格式：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">option = &#123;</span><br><span class="line">    baseOption: &#123; <span class="comment">// 这里是基本的『原子option』。也就是用来设置一些通用的基本的与响应式无关的选项</span></span><br><span class="line">        title: &#123;...&#125;,</span><br><span class="line">        legend: &#123;...&#125;,</span><br><span class="line">        series: [&#123;...&#125;, &#123;...&#125;, ...],</span><br><span class="line">        ...</span><br><span class="line">    &#125;,</span><br><span class="line">    media: [ <span class="comment">// 这里定义了 media query 的逐条规则。</span></span><br><span class="line">        &#123;</span><br><span class="line">            query: &#123;...&#125;,   <span class="comment">// 这里写规则。</span></span><br><span class="line">            option: &#123;       <span class="comment">// 这里写此规则满足下的option。</span></span><br><span class="line">                legend: &#123;...&#125;,</span><br><span class="line">                ...</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            query: &#123;...&#125;,   <span class="comment">// 第二个规则。</span></span><br><span class="line">            option: &#123;       <span class="comment">// 第二个规则对应的option。</span></span><br><span class="line">                legend: &#123;...&#125;,</span><br><span class="line">                ...</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;                   <span class="comment">// 这条里没有写规则，表示『默认』，</span></span><br><span class="line">            option: &#123;       <span class="comment">// 即所有规则都不满足时，采纳这个option。</span></span><br><span class="line">                legend: &#123;...&#125;,</span><br><span class="line">                ...</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
@@ -495,6 +495,11 @@
 <p><strong>多个query被满足时的优先级</strong><br>后面的覆盖前面的</p>
 <p><strong>默认 query：</strong><br>如果 media 中有某项不写 query，则表示『默认值』，即所有规则都不满足时，采纳这个option。</p>
 <p><strong>容器大小实时变化时的注意事项</strong><br>如果要一直动态的改变容器的大小并且让图表的大小也随之改变，那就必须注意<code>query option</code>中出现的配置项，其他<code>query option</code>也必须出现，防止出现回不去的情况。</p>
+<p><strong>关于Echarts响应式还有一件需要注意的事情</strong><br>Echarts.js中虽然有类似响应式的支持，但是这与bootstrap中的响应式有很大不同，echarts中自带的响应式不能像bootstrap中那样随着窗口大小的改变而实时的更改图表的位置以及大小，只有在网页刷新的时候或者再一次setoption的时候才会有位置或者大小的变更，虽然这也能达到响应式的目的，但是我觉得这在bootstrap中会显得十分的不协调，所以我针对这一方面进行了改进，下篇文章进行详细介绍。</p>
+<h3 id="echarts中的事件和行为"><a href="#echarts中的事件和行为" class="headerlink" title="echarts中的事件和行为"></a>echarts中的事件和行为</h3><p>echarts中自带了很多的事件和行为，我们可以通过<code>on</code>的方法来绑定。<br>例如下面的代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是一个echarts中的单击事件，单击图表之后在控制台打印数据</span></span><br><span class="line">myChart.on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">params</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 控制台打印数据的名称</span></span><br><span class="line">    <span class="built_in">console</span>.log(params.name);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>echarts中还有很多的事件，这里就不一一介绍了，这里再说一下鼠标事件返回的参数<code>params</code><br>,这个参数是一个图形的数据信息对象，格式如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 当前点击的图形元素所属的组件名称，</span></span><br><span class="line">    <span class="comment">// 其值如 'series'、'markLine'、'markPoint'、'timeLine' 等。</span></span><br><span class="line">    componentType: string,</span><br><span class="line">    <span class="comment">// 系列类型。值可能为：'line'、'bar'、'pie' 等。当 componentType 为 'series' 时有意义。</span></span><br><span class="line">    seriesType: string,</span><br><span class="line">    <span class="comment">// 系列在传入的 option.series 中的 index。当 componentType 为 'series' 时有意义。</span></span><br><span class="line">    seriesIndex: number,</span><br><span class="line">    <span class="comment">// 系列名称。当 componentType 为 'series' 时有意义。</span></span><br><span class="line">    seriesName: string,</span><br><span class="line">    <span class="comment">// 数据名，类目名</span></span><br><span class="line">    name: string,</span><br><span class="line">    <span class="comment">// 数据在传入的 data 数组中的 index</span></span><br><span class="line">    dataIndex: number,</span><br><span class="line">    <span class="comment">// 传入的原始数据项</span></span><br><span class="line">    data: <span class="built_in">Object</span>,</span><br><span class="line">    <span class="comment">// sankey、graph 等图表同时含有 nodeData 和 edgeData 两种 data，</span></span><br><span class="line">    <span class="comment">// dataType 的值会是 'node' 或者 'edge'，表示当前点击在 node 还是 edge 上。</span></span><br><span class="line">    <span class="comment">// 其他大部分图表中只有一种 data，dataType 无意义。</span></span><br><span class="line">    dataType: string,</span><br><span class="line">    <span class="comment">// 传入的数据值</span></span><br><span class="line">    value: number|<span class="built_in">Array</span></span><br><span class="line">    <span class="comment">// 数据图形的颜色。当 componentType 为 'series' 时有意义。</span></span><br><span class="line">    color: string</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>**echarts中事件与行为更为详细的信息可以查阅相关的<a href="https://echarts.baidu.com/tutorial.html#ECharts%20%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%92%8C%E8%A1%8C%E4%B8%BA" target="_blank" rel="noopener">文档</a>，这里就不详细说明了</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>到这里就介绍了echarts中的一些基本的概念以及信息，还不是特别全面，算是稍微认识了一下echarts，echarts的功能十分的强大可自定义的程度也是非常的高，官方文档有非常详细的配置项介绍，如果感兴趣的话可以慢慢去学习。</p>
 
       
     </div>
@@ -539,6 +544,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/13/echarts中响应式的完善/" rel="prev" title="Echarts中响应式的完善">
+                Echarts中响应式的完善 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -650,7 +659,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -697,12 +706,24 @@ var jiathis_config={
             <div class="links-of-blogroll motion-element links-of-blogroll-inline">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-link"></i>
-                Links
+                相关网站
               </div>
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://example.com/" title="Title" target="_blank">Title</a>
+                    <a href="https://jquery.com/" title="jQuery" target="_blank">jQuery</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://getbootstrap.com/" title="Bootstrap" target="_blank">Bootstrap</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://echarts.baidu.com/" title="Echarts" target="_blank">Echarts</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.w3school.com.cn/" title="w3school" target="_blank">w3school</a>
                   </li>
                 
               </ul>
@@ -724,7 +745,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速上手echarts-js"><span class="nav-number">2.</span> <span class="nav-text">快速上手echarts.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#再来看看一个官方文档中给出的一个南丁格尔图"><span class="nav-number">3.</span> <span class="nav-text">再来看看一个官方文档中给出的一个南丁格尔图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步加载数据"><span class="nav-number">4.</span> <span class="nav-text">异步加载数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用dataset来管理数据"><span class="nav-number">5.</span> <span class="nav-text">使用dataset来管理数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#按行还是按列映射"><span class="nav-number">5.1.</span> <span class="nav-text">按行还是按列映射</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#维度"><span class="nav-number">5.2.</span> <span class="nav-text">维度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据到图形的映射（encode）"><span class="nav-number">5.3.</span> <span class="nav-text">数据到图形的映射（encode）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据的各种格式"><span class="nav-number">5.4.</span> <span class="nav-text">数据的各种格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置多个datase（设置多个source）"><span class="nav-number">5.5.</span> <span class="nav-text">设置多个datase（设置多个source）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他事项"><span class="nav-number">5.6.</span> <span class="nav-text">其他事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图表组件"><span class="nav-number">6.</span> <span class="nav-text">图表组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式图表"><span class="nav-number">7.</span> <span class="nav-text">响应式图表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#echarts组件的定位和布局"><span class="nav-number">7.1.</span> <span class="nav-text">echarts组件的定位和布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图表的方向"><span class="nav-number">7.2.</span> <span class="nav-text">图表的方向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现响应式"><span class="nav-number">7.3.</span> <span class="nav-text">实现响应式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速上手echarts-js"><span class="nav-number">2.</span> <span class="nav-text">快速上手echarts.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#再来看看一个官方文档中给出的一个南丁格尔图"><span class="nav-number">3.</span> <span class="nav-text">再来看看一个官方文档中给出的一个南丁格尔图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步加载数据"><span class="nav-number">4.</span> <span class="nav-text">异步加载数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用dataset来管理数据"><span class="nav-number">5.</span> <span class="nav-text">使用dataset来管理数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#按行还是按列映射"><span class="nav-number">5.1.</span> <span class="nav-text">按行还是按列映射</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#维度"><span class="nav-number">5.2.</span> <span class="nav-text">维度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据到图形的映射（encode）"><span class="nav-number">5.3.</span> <span class="nav-text">数据到图形的映射（encode）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据的各种格式"><span class="nav-number">5.4.</span> <span class="nav-text">数据的各种格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置多个datase（设置多个source）"><span class="nav-number">5.5.</span> <span class="nav-text">设置多个datase（设置多个source）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他事项"><span class="nav-number">5.6.</span> <span class="nav-text">其他事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图表组件"><span class="nav-number">6.</span> <span class="nav-text">图表组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式图表"><span class="nav-number">7.</span> <span class="nav-text">响应式图表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#echarts组件的定位和布局"><span class="nav-number">7.1.</span> <span class="nav-text">echarts组件的定位和布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图表的方向"><span class="nav-number">7.2.</span> <span class="nav-text">图表的方向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现响应式"><span class="nav-number">7.3.</span> <span class="nav-text">实现响应式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#echarts中的事件和行为"><span class="nav-number">8.</span> <span class="nav-text">echarts中的事件和行为</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">9.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -768,7 +789,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共37.2k字</span>
+  <span class="post-count">博客全站共41.8k字</span>
 </div>-->
 
         
