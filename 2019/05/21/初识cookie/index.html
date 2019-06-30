@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;即使在我学习前端知识前，作为一个网络用户，我也见过cookie，但是它究竟是干什么的，有什么用，这是我以前所不知道的，但是我现在作为一名前端学习者，那么就要了解并学习cookie的相关知识，并且会使用它。">
+<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这篇博客经过不断更新就成了现在的版本，最开始学习cookie的时候并没有用cookie具体来实现什么功能，虽然那个时候有思路，但并没有做出来，而经过这么长的时间我已经通过cookie来实现了一个简单的登录功能以及掌握了cookie的更多使用方式，来记录一下。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初识cookie">
+<meta property="og:title" content="cookie的学习以及使用">
 <meta property="og:url" content="https://q32757468.github.io/2019/05/21/初识cookie/index.html">
 <meta property="og:site_name" content="ranshan丶">
-<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;即使在我学习前端知识前，作为一个网络用户，我也见过cookie，但是它究竟是干什么的，有什么用，这是我以前所不知道的，但是我现在作为一名前端学习者，那么就要了解并学习cookie的相关知识，并且会使用它。">
+<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这篇博客经过不断更新就成了现在的版本，最开始学习cookie的时候并没有用cookie具体来实现什么功能，虽然那个时候有思路，但并没有做出来，而经过这么长的时间我已经通过cookie来实现了一个简单的登录功能以及掌握了cookie的更多使用方式，来记录一下。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-21T08:09:02.433Z">
+<meta property="og:updated_time" content="2019-06-30T13:34:51.131Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初识cookie">
-<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;即使在我学习前端知识前，作为一个网络用户，我也见过cookie，但是它究竟是干什么的，有什么用，这是我以前所不知道的，但是我现在作为一名前端学习者，那么就要了解并学习cookie的相关知识，并且会使用它。">
+<meta name="twitter:title" content="cookie的学习以及使用">
+<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这篇博客经过不断更新就成了现在的版本，最开始学习cookie的时候并没有用cookie具体来实现什么功能，虽然那个时候有思路，但并没有做出来，而经过这么长的时间我已经通过cookie来实现了一个简单的登录功能以及掌握了cookie的更多使用方式，来记录一下。">
 
 
 
@@ -137,7 +137,7 @@
   </script>
 
 
-  <title>初识cookie | ranshan丶</title>
+  <title>cookie的学习以及使用 | ranshan丶</title>
   
 
 
@@ -328,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">初识cookie</h1>
+          <h1 class="post-title" itemprop="name headline">cookie的学习以及使用</h1>
         
 
         <div class="post-meta">
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  653
+                  1.6k
                 </span>
               
 
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  6
                 </span>
               
             </div>
@@ -417,7 +417,7 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;即使在我学习前端知识前，作为一个网络用户，我也见过cookie，但是它究竟是干什么的，有什么用，这是我以前所不知道的，但是我现在作为一名前端学习者，那么就要了解并学习cookie的相关知识，并且会使用它。<br><a id="more"></a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这篇博客经过不断更新就成了现在的版本，最开始学习cookie的时候并没有用cookie具体来实现什么功能，虽然那个时候有思路，但并没有做出来，而经过这么长的时间我已经通过cookie来实现了一个简单的登录功能以及掌握了cookie的更多使用方式，来记录一下。<br><a id="more"></a></p>
 </blockquote>
 <h3 id="什么是cookie？"><a href="#什么是cookie？" class="headerlink" title="什么是cookie？"></a>什么是cookie？</h3><p>这是百度百科上的一段话：Cookie，有时也用其复数形式 Cookies，指某些网站为了辨别用户身份、进行 session 跟踪而储存在用户本地终端上的数据（通常经过加密）。定义于 RFC2109 和 2965 中的都已废弃，最新取代的规范是 RFC6265 [1]  。（可以叫做浏览器缓存）</p>
 <p>我们就可以了解到cookie的作用，cookie就是存储了一些信息在本地，并且有一定的存在时间，cookie有这样的功能，就能给用户带来很多遍历，包括不用重复登录之类的。</p>
@@ -430,8 +430,26 @@
 <li><p>cookie的作用范围<br>·不同浏览器之间的cookie不能共用<br>·同一浏览器中，存放cookie的路径的子目录可以访问保存的cookie，但是父目录不能。<br><code>document.cookie=&quot;name=hsl;path=/;&quot;</code>但是可以通过加上path等于根目录使网站下的所有目录都能访问cookie。<br>·默认情况下二级域名之间的cookie不能相互访问，但是设置了主域名之后就可以，<code>domain=hslweb.net</code>。</p>
 </li>
 </ul>
-<h3 id="实际操作一下"><a href="#实际操作一下" class="headerlink" title="实际操作一下"></a>实际操作一下</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> data=<span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    data.setDate(data.getDate()+<span class="number">1</span>);<span class="comment">//设置时间</span></span><br><span class="line">    <span class="built_in">document</span>.cookie=<span class="string">"name=hsl;path=/;expires="</span>+data.toGMTString()+<span class="string">";"</span>;<span class="comment">//创建一个cookie，设置了路径以及过期的时间为后一天。</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>cookie的创建与设置还是很简单的，但是哦cookie的作用却很强大，要好好使用。</p>
+<h3 id="封装cookie的一些方法"><a href="#封装cookie的一些方法" class="headerlink" title="封装cookie的一些方法"></a>封装cookie的一些方法</h3><p>如果不封装方法的，直接获取cookie中我们想要的值还是有一些麻烦的，还有删除一条cookie也是一样，所以这里学习别人封装的两个方法来帮助我们简化操作。</p>
+<ul>
+<li>获取我们想要的cookie<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCookie</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> strcookie = <span class="built_in">document</span>.cookie; <span class="comment">//获取cookie字符串</span></span><br><span class="line">                <span class="keyword">var</span> arrcookie = strcookie.split(<span class="string">"; "</span>); <span class="comment">//分割</span></span><br><span class="line">                <span class="comment">//遍历匹配</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arrcookie.length; i++) &#123;</span><br><span class="line">                    <span class="keyword">var</span> arr = arrcookie[i].split(<span class="string">"="</span>);</span><br><span class="line">                    <span class="keyword">if</span> (arr[<span class="number">0</span>] == name) &#123;</span><br><span class="line">                        <span class="keyword">return</span> arr[<span class="number">1</span>];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>通过以上封装，我们只需要调用函数，然后传递我们想要获取的cookie作为参数就可以获取到我们想要的cookie的值了。</p>
+<ul>
+<li>删除一条cookie<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deleteCookie</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">                date.setTime(date.getTime() - <span class="number">10000</span>);</span><br><span class="line">                <span class="built_in">document</span>.cookie = name + <span class="string">"=name; expires="</span> + date.toGMTString();</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>前面也说过要删除一条cookie只需要让它过期就可以了这个函数就实现了这样的功能，用起来也方便。</p>
+<h3 id="创建条简单的cookie"><a href="#创建条简单的cookie" class="headerlink" title="创建条简单的cookie"></a>创建条简单的cookie</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> data=<span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    data.setDate(data.getDate()+<span class="number">1</span>);<span class="comment">//设置时间</span></span><br><span class="line">    <span class="built_in">document</span>.cookie=<span class="string">"name=hsl;path=/;expires="</span>+data.toGMTString()+<span class="string">";"</span>;<span class="comment">//创建一个cookie，设置了路径以及过期的时间为后一天。</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="通过cookie来实现登录注销功能"><a href="#通过cookie来实现登录注销功能" class="headerlink" title="通过cookie来实现登录注销功能"></a>通过cookie来实现登录注销功能</h3><p>先来简单的说一下思路，思路其实很简单，只需要当我们通过Ajax发送请求登录成功之后将我们获取到的用户名（如果登录是通过用户名来登录可以直接在前端获取到，否则可以由后端传过用户名来）保存到cookie中，可以给cookie设置一个期限，那么在这个期限内就都可以不用重复登录了，也可以不设置，关闭浏览器后就得重新登录，然后如果cookie中有用户名就只要把原本是登录注册的地方替换为用户名以及注销，没有用户名则依然是登陆注册，如果要注销则将cookie删除就可以了。</p>
+<p>那么下面就是一个简单的demo：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"nav-item ml-4"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"nav-link"</span> <span class="attr">href</span>=<span class="string">"./register.html"</span> <span class="attr">id</span>=<span class="string">"register_link"</span> <span class="attr">aria-disabled</span>=<span class="string">"true"</span>&gt;</span>注册<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"nav-item pt-1 ml-4"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">" btn btn-outline-primary btn-sm"</span> <span class="attr">id</span>=<span class="string">"logon_link"</span> <span class="attr">role</span>=<span class="string">"button"</span> <span class="attr">href</span>=<span class="string">"./logon.html"</span>&gt;</span>登录</span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>&gt;</span>(current)<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"nav-item ml-4"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"nav-link"</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">id</span>=<span class="string">"user_name"</span> <span class="attr">aria-disabled</span>=<span class="string">"true"</span> <span class="attr">style</span>=<span class="string">"display: none"</span>&gt;</span>admin<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"nav-item ml-4"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"nav-link"</span> <span class="attr">href</span>=<span class="string">"./index.html"</span> <span class="attr">id</span>=<span class="string">"logout_btn"</span> <span class="attr">aria-disabled</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">style</span>=<span class="string">"display: none"</span>&gt;</span>注销<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>用户名和注销是默认不显示的，登录成功后则将他们显示，将登录注册设置为不显示。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 获取cookie中的值</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">getCookie</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> strcookie = <span class="built_in">document</span>.cookie; <span class="comment">//获取cookie字符串</span></span><br><span class="line">            <span class="keyword">var</span> arrcookie = strcookie.split(<span class="string">"; "</span>); <span class="comment">//分割</span></span><br><span class="line">            <span class="comment">//遍历匹配</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arrcookie.length; i++) &#123;</span><br><span class="line">                <span class="keyword">var</span> arr = arrcookie[i].split(<span class="string">"="</span>);</span><br><span class="line">                <span class="keyword">if</span> (arr[<span class="number">0</span>] == name) &#123;</span><br><span class="line">                    <span class="keyword">return</span> arr[<span class="number">1</span>];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        getCookie(<span class="string">'name'</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 删除cookie的方法</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">deleteCookie</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">            date.setTime(date.getTime() - <span class="number">10000</span>);</span><br><span class="line">            <span class="built_in">document</span>.cookie = name + <span class="string">"=name; expires="</span> + date.toGMTString();</span><br><span class="line">        &#125;</span><br><span class="line">        (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">// 获取以后要操作的元素</span></span><br><span class="line">            <span class="keyword">var</span> register_link = $(<span class="string">'#register_link'</span>);</span><br><span class="line">            <span class="keyword">var</span> logon_link = $(<span class="string">'#logon_link'</span>);</span><br><span class="line">            <span class="keyword">var</span> user_name = $(<span class="string">"#user_name"</span>);</span><br><span class="line">            <span class="keyword">var</span> logout_btn = $(<span class="string">'#logout_btn'</span>);</span><br><span class="line">            <span class="keyword">var</span> name = getCookie(<span class="string">'name'</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 点击注销删除cookie</span></span><br><span class="line">            logout_btn.click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                deleteCookie(<span class="string">'name'</span>);</span><br><span class="line">            &#125;)</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 判断cookie中是否有存放用户名</span></span><br><span class="line">            <span class="keyword">if</span> (name) &#123;</span><br><span class="line">                <span class="comment">// 如果有，则将登录注册隐藏，替换成用户名和注销</span></span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">'这里面有东西'</span>);</span><br><span class="line">                user_name.text(name);</span><br><span class="line">                register_link.hide();</span><br><span class="line">                logon_link.hide();</span><br><span class="line">                user_name.show();</span><br><span class="line">                logout_btn.show();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 如果没有，则将用户名和注销隐藏</span></span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">'这里面是空的'</span>);</span><br><span class="line">                register_link.show();</span><br><span class="line">                logon_link.show();</span><br><span class="line">                user_name.hide();</span><br><span class="line">                logout_btn.hide();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)();</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里只写了前端的逻辑，后端php的代码在这里就不介绍了，其实就是对用户名和密码进行一个匹配，成功了则返回相应的数据</p>
+</blockquote>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>cookie的创建与设置还是很简单的，但是cookie的作用却很强大，要好好使用。cookie应用做多的场景应该就是登录功能的实现了，必须要掌握。</p>
 
       
     </div>
@@ -591,7 +609,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -681,7 +699,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是cookie？"><span class="nav-number">2.</span> <span class="nav-text">什么是cookie？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie的一些特点"><span class="nav-number">3.</span> <span class="nav-text">cookie的一些特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实际操作一下"><span class="nav-number">4.</span> <span class="nav-text">实际操作一下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结："><span class="nav-number">5.</span> <span class="nav-text">总结：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是cookie？"><span class="nav-number">2.</span> <span class="nav-text">什么是cookie？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie的一些特点"><span class="nav-number">3.</span> <span class="nav-text">cookie的一些特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#封装cookie的一些方法"><span class="nav-number">4.</span> <span class="nav-text">封装cookie的一些方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建条简单的cookie"><span class="nav-number">5.</span> <span class="nav-text">创建条简单的cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过cookie来实现登录注销功能"><span class="nav-number">6.</span> <span class="nav-text">通过cookie来实现登录注销功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结："><span class="nav-number">7.</span> <span class="nav-text">总结：</span></a></li></ol></div>
             
 
           </div>
@@ -725,7 +743,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共58.6k字</span>
+  <span class="post-count">博客全站共60.6k字</span>
 </div>-->
 
         
