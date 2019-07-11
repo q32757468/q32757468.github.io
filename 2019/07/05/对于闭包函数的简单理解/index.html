@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="ranshan丶">
 <meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;闭包是ECMAScript （JavaScript）最强大的特性之一，但用好闭包的前提是必须理解闭包。学习和理解闭包是十分必要的，这次我学习后对闭包的简单理解。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-10T02:55:06.891Z">
+<meta property="og:updated_time" content="2019-07-10T02:58:49.912Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对于闭包函数的简单理解">
 <meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;闭包是ECMAScript （JavaScript）最强大的特性之一，但用好闭包的前提是必须理解闭包。学习和理解闭包是十分必要的，这次我学习后对闭包的简单理解。">
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  805
+                  813
                 </span>
               
 
@@ -438,7 +438,7 @@
 <p>配合匿名立即执行函数使用就可以很轻松的将一个函数转化为闭包。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b;</span><br><span class="line">        (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            count = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> obj = &#123;</span><br><span class="line">                a() &#123;</span><br><span class="line">                    count++</span><br><span class="line">                    <span class="built_in">console</span>.log(count);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            b = obj;</span><br><span class="line">        &#125;)();</span><br><span class="line">        b.a();  <span class="comment">//2</span></span><br><span class="line">        b.a();  <span class="comment">//3</span></span><br><span class="line">        b.a();  <span class="comment">//4</span></span><br></pre></td></tr></table></figure>
 <p>将最开始的例子改写以下，这样也是一个闭包，虽然没有返回值，但是最终还是通过对象来调用了内部的函数从而使用了外部函数的变量，实际上还是一个闭包。</p>
-<p>还有一个闭包的例子参考我的另一篇博客</p>
+<p>还有一个闭包的例子参考我的另一篇博客<a href="https://q32757468.github.io/2019/07/05/%E5%85%B3%E4%BA%8Efor%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%BD%BF%E7%94%A8setTimeout/#more">关于for循环中使用setTimeout</a></p>
 <h3 id="如何创建一个闭包"><a href="#如何创建一个闭包" class="headerlink" title="如何创建一个闭包"></a>如何创建一个闭包</h3><ul>
 <li>定义外层函数，封装被保护的局部变量。</li>
 <li>定义内层函数，执行对外部函数变量的操作。</li>
@@ -605,7 +605,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -739,7 +739,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共72.1k字</span>
+  <span class="post-count">博客全站共75.9k字</span>
 </div>-->
 
         

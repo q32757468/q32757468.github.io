@@ -81,17 +81,20 @@
 
 
 
-<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近在写期末的课程设计，网站有要求写一个五星评分的功能，我按照我的思路写了一下，经过一下午的时间，把这个功能实现的比较完善了。">
+<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;想要更加的了解js就需要对它的运作机制有更加深入的了解，这次来了解以下js的内存空间与垃圾回收机制，通过理解这两个概念对我们的开发十分有帮助。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="写一个简单的五星评分系统">
-<meta property="og:url" content="https://q32757468.github.io/2019/05/27/写一个简单的五星评分系统/index.html">
+<meta property="og:title" content="简单理解js中的内存空间与垃圾回收">
+<meta property="og:url" content="https://q32757468.github.io/2019/07/11/简单理解js中的内存空间与垃圾回收机制/index.html">
 <meta property="og:site_name" content="ranshan丶">
-<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近在写期末的课程设计，网站有要求写一个五星评分的功能，我按照我的思路写了一下，经过一下午的时间，把这个功能实现的比较完善了。">
+<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;想要更加的了解js就需要对它的运作机制有更加深入的了解，这次来了解以下js的内存空间与垃圾回收机制，通过理解这两个概念对我们的开发十分有帮助。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-27T10:57:34.131Z">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/z*R*IeVf8ofKH3UImPKBD2VQgzyGlwQ5Sz8lcpBZPgc!/b/dLsAAAAAAAAA&bo=NgEUAgAAAAADBwM!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/WeIMtcs*I.Iyfd6yw*nID7ZWqUtzAUsGG2vMMsDBERo!/b/dFMBAAAAAAAA&bo=OQPVAQAAAAADF9w!&rf=viewer_4">
+<meta property="og:updated_time" content="2019-07-11T10:09:53.087Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="写一个简单的五星评分系统">
-<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近在写期末的课程设计，网站有要求写一个五星评分的功能，我按照我的思路写了一下，经过一下午的时间，把这个功能实现的比较完善了。">
+<meta name="twitter:title" content="简单理解js中的内存空间与垃圾回收">
+<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;想要更加的了解js就需要对它的运作机制有更加深入的了解，这次来了解以下js的内存空间与垃圾回收机制，通过理解这两个概念对我们的开发十分有帮助。">
+<meta name="twitter:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/z*R*IeVf8ofKH3UImPKBD2VQgzyGlwQ5Sz8lcpBZPgc!/b/dLsAAAAAAAAA&bo=NgEUAgAAAAADBwM!&rf=viewer_4">
 
 
 
@@ -121,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="https://q32757468.github.io/2019/05/27/写一个简单的五星评分系统/">
+  <link rel="canonical" href="https://q32757468.github.io/2019/07/11/简单理解js中的内存空间与垃圾回收机制/">
 
 
 
@@ -137,7 +140,7 @@
   </script>
 
 
-  <title>写一个简单的五星评分系统 | ranshan丶</title>
+  <title>简单理解js中的内存空间与垃圾回收 | ranshan丶</title>
   
 
 
@@ -311,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://q32757468.github.io/2019/05/27/写一个简单的五星评分系统/">
+    <link itemprop="mainEntityOfPage" href="https://q32757468.github.io/2019/07/11/简单理解js中的内存空间与垃圾回收机制/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hsl">
@@ -328,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">写一个简单的五星评分系统</h1>
+          <h1 class="post-title" itemprop="name headline">简单理解js中的内存空间与垃圾回收</h1>
         
 
         <div class="post-meta">
@@ -340,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-27T18:42:06+08:00">
-                2019-05-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-11T14:56:40+08:00">
+                2019-07-11
               </time>
             
 
@@ -379,7 +382,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  763
+                  1.1k
                 </span>
               
 
@@ -417,15 +420,56 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最近在写期末的课程设计，网站有要求写一个五星评分的功能，我按照我的思路写了一下，经过一下午的时间，把这个功能实现的比较完善了。<br><a id="more"></a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;想要更加的了解js就需要对它的运作机制有更加深入的了解，这次来了解以下js的内存空间与垃圾回收机制，通过理解这两个概念对我们的开发十分有帮助。<br><a id="more"></a></p>
 </blockquote>
-<h3 id="一开始的第一种尝试"><a href="#一开始的第一种尝试" class="headerlink" title="一开始的第一种尝试"></a>一开始的第一种尝试</h3><p>放代码：<br>HTML部分：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    list-style: none;</span><br><span class="line">&#125;</span><br><span class="line">.all&#123;</span><br><span class="line">    display: flex;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"all"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">index</span>=<span class="string">0</span> <span class="attr">src</span>=<span class="string">"./images/wxz.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">index</span>=<span class="string">1</span> <span class="attr">src</span>=<span class="string">"./images/wxz.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">index</span>=<span class="string">2</span> <span class="attr">src</span>=<span class="string">"./images/wxz.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">index</span>=<span class="string">3</span> <span class="attr">src</span>=<span class="string">"./images/wxz.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">index</span>=<span class="string">4</span> <span class="attr">src</span>=<span class="string">"./images/wxz.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>JS部分：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $stars=$(<span class="string">'img'</span>);</span><br><span class="line">        <span class="built_in">console</span>.log($stars);</span><br><span class="line">        <span class="comment">// 最外面的循环是给所有img添加事件</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;$stars.length;i++)&#123;</span><br><span class="line">            $stars.eq(i).mouseenter(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="comment">// 第二层的循环是判断是否是当前正在操作的元素</span></span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;$stars.length;i++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>($stars[i]==<span class="keyword">this</span>)&#123;</span><br><span class="line">                        $(<span class="keyword">this</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                            <span class="built_in">console</span>.log(i);                           </span><br><span class="line">                        &#125;)</span><br><span class="line">                        <span class="comment">// 第三层的循环是给所有的星星设置相应的图片,让它显示出应有的效果</span></span><br><span class="line">                        <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;$stars.length;j++)&#123;</span><br><span class="line">                            <span class="keyword">if</span>(j&lt;=i)&#123;</span><br><span class="line">                                $stars.eq(j).attr(<span class="string">"src"</span>,<span class="string">"./images/xz.png"</span>)</span><br><span class="line">                            &#125;</span><br><span class="line">                            <span class="keyword">else</span>&#123;</span><br><span class="line">                                $stars.eq(j).attr(<span class="string">"src"</span>,<span class="string">"./images/wxz.png"</span>)</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>最终是实现了效果,但是我觉得这不是最好最简单的写法,于是我将其改进了一下，有了下面的这种写法。</p>
-<h3 id="第二种写法"><a href="#第二种写法" class="headerlink" title="第二种写法"></a>第二种写法</h3><p>第二种写法原理其实也是一样的，只不过是代码更加的简介和简单<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">*&#123;</span></span><br><span class="line"><span class="undefined">    list-style: none;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.all</span>&#123;</span></span><br><span class="line"><span class="undefined">    display: flex;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"all"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">index</span>=<span class="string">"0"</span> <span class="attr">src</span>=<span class="string">"./images/wxz.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">index</span>=<span class="string">"1"</span> <span class="attr">src</span>=<span class="string">"./images/wxz.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">index</span>=<span class="string">"2"</span> <span class="attr">src</span>=<span class="string">"./images/wxz.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">index</span>=<span class="string">"3"</span> <span class="attr">src</span>=<span class="string">"./images/wxz.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">index</span>=<span class="string">"4"</span> <span class="attr">src</span>=<span class="string">"./images/wxz.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $stars=$(<span class="string">'img'</span>);<span class="comment">//获取所有的星星</span></span><br><span class="line">        <span class="comment">// 鼠标移入事件</span></span><br><span class="line">        $stars.mouseenter(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> $star_index=<span class="built_in">parseInt</span>($(<span class="keyword">this</span>).attr(<span class="string">"index"</span>));</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;$stars.length;i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i&lt;=$star_index)&#123;</span><br><span class="line">                    $stars.eq(i).attr(<span class="string">"src"</span>,<span class="string">"./images/xz.png"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    $stars.eq(i).attr(<span class="string">"src"</span>,<span class="string">"./images/wxz.png"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;            </span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">// 单击事件，向服务器提交数据</span></span><br><span class="line">        $stars.click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> $star_index=<span class="built_in">parseInt</span>($(<span class="keyword">this</span>).attr(<span class="string">"index"</span>));</span><br><span class="line">            <span class="built_in">console</span>.log($star_index+<span class="number">1</span>);  </span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>可以看出第二种写法要简单很多，主要是没有这么多的循环嵌套，这也是我最终所采用的写法。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>虽然这个评分系统的原理以及思路是挺简单的，但其实在实现的过程中还是遇到了一些困难的，不过经过不断的思考排错，最终还是将其完善了，相信只要不断的学习，以后一定能越来越得心应手。</p>
+<h3 id="内存空间"><a href="#内存空间" class="headerlink" title="内存空间"></a>内存空间</h3><p>我们都知道js中的数据类型有基础数据类型与引用数据类型之分，二者的运作机制也不一样。</p>
+<h4 id="基础数据类型与栈内存"><a href="#基础数据类型与栈内存" class="headerlink" title="基础数据类型与栈内存"></a>基础数据类型与栈内存</h4><ul>
+<li><p>我们知道在创建执行上下文时会找到所有变量声明，并且创建VO同时消耗一定的内存空间，当到达执行阶段的时候VO成为AO，所有变量都可以访问。</p>
+</li>
+<li><p>当变量的值被修改时就会直接在相应栈内存空间对变量的值进行修改。</p>
+</li>
+<li><p>当复制一个变量会直接在VO中创建这个变量的值的副本，同时占用新的栈内存空间。</p>
+</li>
+</ul>
+<p><img src="http://m.qpic.cn/psb?/V131x4904WMIoW/z*R*IeVf8ofKH3UImPKBD2VQgzyGlwQ5Sz8lcpBZPgc!/b/dLsAAAAAAAAA&bo=NgEUAgAAAAADBwM!&rf=viewer_4"></p>
+<h3 id="引用数据类型与堆内存"><a href="#引用数据类型与堆内存" class="headerlink" title="引用数据类型与堆内存"></a>引用数据类型与堆内存</h3><ul>
+<li><p>而引用类型的数据在创建执行上下文后，到达执行阶段时，变量保存的实际上是对象的引用，保存的也就是堆内存中堆内存的地址。</p>
+</li>
+<li><p>当复制一个引用类型的值的时候也会在VO中创建一个值的副本，但是区别在于基础类型的值就是栈内存空间中的值，而引用类型的值是一个地址，所以即使复制了一份，其实两个变量引用的是同一个对象。</p>
+</li>
+<li><p>当复制保存着对象的某个变量时，操作的是对象的引用。但在为对象添加属性时，操作的是实际的对象，所以修改复制的变量，也会影响到被复制的哪一个变量。</p>
+</li>
+</ul>
+<p><img src="http://m.qpic.cn/psb?/V131x4904WMIoW/WeIMtcs*I.Iyfd6yw*nID7ZWqUtzAUsGG2vMMsDBERo!/b/dFMBAAAAAAAA&bo=OQPVAQAAAAADF9w!&rf=viewer_4"></p>
+<h3 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h3><p>js有自动的垃圾回收机制，所有通常我们可以不用管垃圾回收这件事，而垃圾回收一般有两个策略。</p>
+<h4 id="标记清除"><a href="#标记清除" class="headerlink" title="标记清除"></a>标记清除</h4><p>标记清除说简单点就像名字这样理解，清除被标记的变量。</p>
+<ul>
+<li><p>垃圾收集器会在运行时给内存中所有的变量都加上标记</p>
+</li>
+<li><p>然后会去掉环境中的变量，以及环境中引用的变量的标记</p>
+</li>
+<li><p>删除那些被标记的变量以及他们的值并且回收相应的内存空间</p>
+</li>
+</ul>
+<blockquote>
+<p>到 2008年为止，IE、Firefox、Opera、Chrome和 Safari的 JavaScript实现使用的都是标记清除式的 垃圾收集策略（或类似的策略），只不过垃圾收集的时间间隔互有不同。</p>
+</blockquote>
+<h4 id="引用计数"><a href="#引用计数" class="headerlink" title="引用计数"></a>引用计数</h4><p>引用计数就是记录变量的引用次数，当变量每被使用一次，赋值给另一个变量，该变量的引用次数就加以，被赋值的变量被其他变量赋值，该变量引用次数就减一。如果这个变量引用次数为0则在垃圾收集器运作时将其回收。</p>
+<blockquote>
+<p>最早是Netscape使用这种方法，但是因为这种方法存在问题，所以后来被弃用了。</p>
+</blockquote>
+<p>###垃圾回收与内存空间及其优化</p>
+<ul>
+<li><p>局部变量只在函数执行的过程中存在。而在这个过程中，会为局部变量在栈（或堆）内存上分配相应的空间，以便存储它们的值。然后在函数中使用这些变量，直至函数执行结束。此时，局部变量就没有存在的必要了，因此可以释放它们的内存以供将来使用。在这种情况下，很容易判断变量是否还有存在的要</p>
+</li>
+<li><p>由于分配给web浏览器的内存空间通常相比桌面应用程序要更加的少，所以要尽可能都优化内存的消耗。</p>
+</li>
+<li><p>但是全部变量就不一样，全局变量就在那，不知道你什么时候会用它，并不会被回收，所以并不推荐使用过多的全局变量，推荐使用<code>let</code>与<code>const</code>来创建块级变量，减少内存的消耗。</p>
+</li>
+<li><p>如果使用了全局变量，最好的处理方式就是在这个变量不再使用就将其设置为<code>null</code>以优化内存消耗。</p>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过梳理清楚js中有关内存相关的知识，可以有对js更加深的认识，对开发以及性能会有很大帮助。</p>
 
       
     </div>
@@ -461,8 +505,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/26/hash的使用/" rel="next" title="HTML中DOM的hash属性的使用">
-                <i class="fa fa-chevron-left"></i> HTML中DOM的hash属性的使用
+              <a href="/2019/07/10/ES6的使用/" rel="next" title="ES6的使用">
+                <i class="fa fa-chevron-left"></i> ES6的使用
               </a>
             
           </div>
@@ -470,10 +514,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/03/php中页面分页的实现/" rel="prev" title="php中页面分页的实现">
-                php中页面分页的实现 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -675,7 +715,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一开始的第一种尝试"><span class="nav-number">2.</span> <span class="nav-text">一开始的第一种尝试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二种写法"><span class="nav-number">3.</span> <span class="nav-text">第二种写法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内存空间"><span class="nav-number">2.</span> <span class="nav-text">内存空间</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基础数据类型与栈内存"><span class="nav-number">2.1.</span> <span class="nav-text">基础数据类型与栈内存</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用数据类型与堆内存"><span class="nav-number">3.</span> <span class="nav-text">引用数据类型与堆内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垃圾回收机制"><span class="nav-number">4.</span> <span class="nav-text">垃圾回收机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标记清除"><span class="nav-number">4.1.</span> <span class="nav-text">标记清除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引用计数"><span class="nav-number">4.2.</span> <span class="nav-text">引用计数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
