@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;经过学习了vue的一些简单基本的东西，现在讲前面学过的这些东西简单的引用一下，做一个可以简单操作页面元素的页面，同时来熟悉vue的操作。">
+<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;执行环境（execution context）也有翻译为执行上下文，这是JS中非常基础但是也非常重要的一个概念，通过理解执行环境我们可以更加了解js的运作机制。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="通过vue来做一个可以简单操作的页面">
-<meta property="og:url" content="https://q32757468.github.io/2019/06/17/通过vue来做一个可以简单操作的页面/index.html">
+<meta property="og:title" content="理解JS中的执行环境">
+<meta property="og:url" content="https://q32757468.github.io/2019/07/21/理解JS中的执行环境/index.html">
 <meta property="og:site_name" content="ranshan丶">
-<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;经过学习了vue的一些简单基本的东西，现在讲前面学过的这些东西简单的引用一下，做一个可以简单操作页面元素的页面，同时来熟悉vue的操作。">
+<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;执行环境（execution context）也有翻译为执行上下文，这是JS中非常基础但是也非常重要的一个概念，通过理解执行环境我们可以更加了解js的运作机制。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/oTLF7.aDPoIaR6KZSqfT7Y7ICMF43yoVYspA5rV52MM!/b/dL4AAAAAAAAA&bo=CgW3AQAAAAADB5s!&rf=viewer_4">
-<meta property="og:updated_time" content="2019-06-17T12:24:41.554Z">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/zfAwo9zxnj2TpvYz6yNVcFum7BaXmPIokG4SckB0snM!/b/dLYAAAAAAAAA&bo=WgQtAgAAAAADB1M!&rf=viewer_4">
+<meta property="og:updated_time" content="2019-07-22T05:11:39.582Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="通过vue来做一个可以简单操作的页面">
-<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;经过学习了vue的一些简单基本的东西，现在讲前面学过的这些东西简单的引用一下，做一个可以简单操作页面元素的页面，同时来熟悉vue的操作。">
-<meta name="twitter:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/oTLF7.aDPoIaR6KZSqfT7Y7ICMF43yoVYspA5rV52MM!/b/dL4AAAAAAAAA&bo=CgW3AQAAAAADB5s!&rf=viewer_4">
+<meta name="twitter:title" content="理解JS中的执行环境">
+<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;执行环境（execution context）也有翻译为执行上下文，这是JS中非常基础但是也非常重要的一个概念，通过理解执行环境我们可以更加了解js的运作机制。">
+<meta name="twitter:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/zfAwo9zxnj2TpvYz6yNVcFum7BaXmPIokG4SckB0snM!/b/dLYAAAAAAAAA&bo=WgQtAgAAAAADB1M!&rf=viewer_4">
 
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="https://q32757468.github.io/2019/06/17/通过vue来做一个可以简单操作的页面/">
+  <link rel="canonical" href="https://q32757468.github.io/2019/07/21/理解JS中的执行环境/">
 
 
 
@@ -139,7 +139,7 @@
   </script>
 
 
-  <title>通过vue来做一个可以简单操作的页面 | ranshan丶</title>
+  <title>理解JS中的执行环境 | ranshan丶</title>
   
 
 
@@ -313,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://q32757468.github.io/2019/06/17/通过vue来做一个可以简单操作的页面/">
+    <link itemprop="mainEntityOfPage" href="https://q32757468.github.io/2019/07/21/理解JS中的执行环境/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hsl">
@@ -330,7 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">通过vue来做一个可以简单操作的页面</h1>
+          <h1 class="post-title" itemprop="name headline">理解JS中的执行环境</h1>
         
 
         <div class="post-meta">
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-17T16:42:47+08:00">
-                2019-06-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-21T19:18:41+08:00">
+                2019-07-21
               </time>
             
 
@@ -381,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.3k
+                  1.1k
                 </span>
               
 
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  3
                 </span>
               
             </div>
@@ -419,31 +419,45 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经过学习了vue的一些简单基本的东西，现在讲前面学过的这些东西简单的引用一下，做一个可以简单操作页面元素的页面，同时来熟悉vue的操作。<br><a id="more"></a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行环境（execution context）也有翻译为执行上下文，这是JS中非常基础但是也非常重要的一个概念，通过理解执行环境我们可以更加了解js的运作机制。<br><a id="more"></a></p>
 </blockquote>
-<h3 id="代码和效果图"><a href="#代码和效果图" class="headerlink" title="代码和效果图"></a>代码和效果图</h3><p>html:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"card-header"</span>&gt;</span></span><br><span class="line">                    相关操作</span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"card-body"</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!-- 给表单添加v-model来实现数据的双向绑定 --&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">"form-inline"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">""</span>&gt;</span>id：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">"form-control mr-md-2 "</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">v-model</span>=<span class="string">"id"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">""</span>&gt;</span>name：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">v-model</span>=<span class="string">"name"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn btn-primary ml-md-1 mr-md-3"</span> <span class="attr">type</span>=<span class="string">"button"</span> @<span class="attr">click</span>=<span class="string">'add'</span>&gt;</span>添加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!-- 实现搜索功能 --&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">""</span>&gt;</span>输入关键字进行搜索：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"table table-light mt-5 table-bordered table-striped"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">thead</span> <span class="attr">class</span>=<span class="string">"thead-light"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Id<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Time<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">th</span>&gt;</span>opration<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!-- 通过v-for的循环来将我们的数据来渲染到页面中 --&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">tr</span> <span class="attr">v-for</span>=<span class="string">"(item) in info"</span> <span class="attr">:key</span>=<span class="string">"item.id"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123;item.id&#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123;item.name&#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123;item.time&#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> @<span class="attr">click.prevent</span>=<span class="string">'rm(item.id)'</span>&gt;</span>删除<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#app'</span>,</span><br><span class="line">    data() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            id: <span class="string">''</span>,</span><br><span class="line">            name: <span class="string">''</span>,</span><br><span class="line">            time: <span class="string">''</span>,</span><br><span class="line">            keywords:<span class="string">''</span>,</span><br><span class="line">            <span class="comment">// 将我们页面中的数据放在这俩面</span></span><br><span class="line">            info: [&#123;</span><br><span class="line">                    id: <span class="string">'1'</span>,</span><br><span class="line">                    name: <span class="string">'aaa'</span>,</span><br><span class="line">                    time: <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    id: <span class="string">'2'</span>,</span><br><span class="line">                    name: <span class="string">'bbb'</span>,</span><br><span class="line">                    time: <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">                &#125;,</span><br><span class="line">            ],</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        <span class="comment">// 通过自己构建函数来控制添加和删除</span></span><br><span class="line">        add() &#123;<span class="comment">//这是添加的函数</span></span><br><span class="line">            <span class="keyword">this</span>.info.push(&#123;</span><br><span class="line">                id: <span class="keyword">this</span>.id,</span><br><span class="line">                name: <span class="keyword">this</span>.name,</span><br><span class="line">                time: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">this</span>.id = <span class="keyword">this</span>.name = <span class="string">''</span>;</span><br><span class="line">        &#125;,</span><br><span class="line">        rm(id) &#123;<span class="comment">//这是删除的函数，我用了两种写法</span></span><br><span class="line">            <span class="comment">// this.info.forEach((item,index) =&gt; &#123;</span></span><br><span class="line">            <span class="comment">//     if(id=item.id)&#123;</span></span><br><span class="line">            <span class="comment">//         this.info.splice(index,1)</span></span><br><span class="line">            <span class="comment">//         return ;</span></span><br><span class="line">            <span class="comment">//     &#125;                  </span></span><br><span class="line">            <span class="comment">// &#125;);</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 这一种代码会更简便一些</span></span><br><span class="line">            <span class="keyword">this</span>.info.splice(<span class="keyword">this</span>.info.findIndex(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> item.id == id;</span><br><span class="line">            &#125;), <span class="number">1</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        searchList(keywords)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.info.filter(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> item.name.includes(keywords);</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>最后的效果图：<br><img src="http://m.qpic.cn/psb?/V131x4904WMIoW/oTLF7.aDPoIaR6KZSqfT7Y7ICMF43yoVYspA5rV52MM!/b/dL4AAAAAAAAA&bo=CgW3AQAAAAADB5s!&rf=viewer_4"></p>
-<p>通过页面上的增加和删除就可以实现页面的修改</p>
-<h3 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h3><p>在vue中更看重于业务逻辑，所以很多方面的工作我们不需要去关心，也不需要去操作dom对象就可以轻松的修改页面上的内容</p>
+<h3 id="什么是执行环境"><a href="#什么是执行环境" class="headerlink" title="什么是执行环境"></a>什么是执行环境</h3><p><strong>执行环境</strong>定义了变量或函数有权访问的其他数据，决定了它们各自的行为。这是高级编程中的一句话。</p>
+<p>说简单点理解，<strong>执行环境</strong>其实就是一个环境，在这个环境中保存了一些重要的数据。</p>
+<p>每个函数都有自己的<strong>执行环境</strong>，此外还存在一个全局的执行环境，在web浏览器中，该执行环境被认为是window对象（因为所有的属性和方法都是window对象创建的）。</p>
+<p>当<strong>执行环境</strong>中的所有代码执行完毕后，该执行环境就会被销毁，退出执行栈。（全局执行环境直到浏览器关闭才会被销毁）</p>
+<h3 id="执行环境与执行栈"><a href="#执行环境与执行栈" class="headerlink" title="执行环境与执行栈"></a>执行环境与执行栈</h3><p>要理解执行环境我们还需要了解一个概念：<strong>执行栈</strong>。我们都知道栈是一种LIFO（Last-In-First-Out）的数据结构，也就是后进先出。</p>
+<p>通过我前面的关于js事件循环机制的文章现在我们可以知道，当js执行到非异步的函数的时候会立马将该函数推入到执行栈中，那么现在我们可以知道被推入执行栈的是该函数的执行环境,当函数执行完毕就会被弹出，也就是执行环境被销毁，然后根据执行流继续执行后面的代码。</p>
+<p>到这里我相信执行环境的基本概念已经有了，也就是在执行某一函数时的环境，当函数执行完毕该环境就会被销毁。</p>
+<p>现在我们可以通过一个例子来更加形象的理解执行栈与执行环境：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123;</span><br><span class="line">  console.log(&apos;csznb&apos;);</span><br><span class="line">  function bar() &#123;</span><br><span class="line">    console.log(&apos;cszsfyq&apos;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">function baz() &#123;</span><br><span class="line">  console.log(&apos;cszfcs&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我们可以通过图片方便理解：<br><img src="http://m.qpic.cn/psb?/V131x4904WMIoW/zfAwo9zxnj2TpvYz6yNVcFum7BaXmPIokG4SckB0snM!/b/dLYAAAAAAAAA&bo=WgQtAgAAAAADB1M!&rf=viewer_4"></p>
 <ul>
-<li><p>我们通过<code>v-for</code>的循环将我们的数据渲染到页面中</p>
+<li><p>通过图片我们就可以很直观的理解执行栈与执行环境了。</p>
 </li>
-<li><p>我们通过<code>v-model</code>数据双向绑定来将用户在页面中输入的数据放到我们存放数据的地方，因为vue的特性，只要数据有更新，那么页面就会跟着一起更新，这是十分方便的一件事情</p>
+<li><p>在开始执行foo函数之前，执行栈中就只有全局的执行环境，</p>
 </li>
-<li><p>再通过数组的一些操作方法将我们想要删除的数据进行删除，那么页面中相应的内容也会被删除。</p>
+<li><p>当执行到foo函数就会把其执行环境推入执行栈中执行其中的代码，</p>
 </li>
-<li><p>搜索功能是通过<code>v-model</code>数据的双向绑定来拿到用户需要搜索的数据，然后通过filter()这个方法来设置条件进行过滤，然后返回一个新的数组，过滤的条件可以通过inclues来设置。</p>
+<li><p>当执行到bar函数则把bar函数的执行环境推入到执行栈中，由于此时这两个函数都还没有执行完毕，所以这两个函数的执行环境都存在于执行栈中，</p>
+</li>
+<li><p>当执行完bar函数中的代码，bar函数的执行环境就被弹出，foo函数的代码也意味着执行完毕，执行环境也被弹出，</p>
+</li>
+<li><p>接着开始执行baz函数，将其执行环境推入执行栈中，当执行完函数中的代码则被弹出，</p>
+</li>
+<li><p>最后只剩下一个全局执行环境，当浏览器关闭，全局执行环境也被销毁。</p>
 </li>
 </ul>
-<h3 id="学习到的一些知识"><a href="#学习到的一些知识" class="headerlink" title="学习到的一些知识"></a>学习到的一些知识</h3><p>正如我上一篇博客介绍的那样，在特定的情况下使用filter之类的方法会更加的便捷，这次在写搜索的那个函数的时候我就用到了filter这个方法，使代码更加的精简，这里可以使用foreach，但这会有更加多的代码量，所以我没有这么做。</p>
-<h3 id="我遇到的一些坑与问题"><a href="#我遇到的一些坑与问题" class="headerlink" title="我遇到的一些坑与问题"></a>我遇到的一些坑与问题</h3><ul>
-<li><p>第一个花费时间比较久的地方是当我完成了数据的添加的这个功能之后发现了一个问题就是当我向页面中添加完数据之后，我再修改输入框中的数据，已经渲染在页面之中的数据也会跟着一起修改，很显然这不是我想要的效果，后面发现是我将一个带着变量的对象直接push到数组当中，而不是在单击事件的时候通过变量创建一个新的对象再push进去。<strong>也就是说应该需要一个中间的变量来将一个会实时变化的变量变成一个固定的变量。</strong></p>
+<h3 id="执行环境中的内容"><a href="#执行环境中的内容" class="headerlink" title="执行环境中的内容"></a>执行环境中的内容</h3><p>前面也提到了执行环境其实就是一个环境，其中保存了重要的数据，那么究竟保存的是什么数据呢？</p>
+<ul>
+<li><p>首先执行环境中很重要的一部分就是<strong>变量对象</strong>，在执行环境的创建时就会建立活动对象。</p>
 </li>
-<li><p>第二个问题就是在使用findIndex方法的时候将<code>return item.id == id</code>写成了<code>return item.id = id</code> 导致在操作的时候出现了问题</p>
+<li><p>执行环境中还保存了<strong>作用域链</strong>，当代码在一个环境中执行时，会创建变量对象的一个作用域链。</p>
+</li>
+<li><p>另外在执行环境中还确定了<strong>this的指向</strong>。</p>
 </li>
 </ul>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这次写这些东西让我对vue有了更加清晰的概念，并且也用了一些以前没有用过的方法来使代码更加的简单，同时要记住写代码犯的一些错误，要记住在进行比较的时候判断是否相等要用<code>==</code>，千万不能永成赋值符号<code>=</code></p>
+<p>关于这三者的详细理解这里我就不介绍了，后面会些专门的文章来解释。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>当执行到一个函数，该函数的执行环境就会被推入执行栈，当这个函数完全执行完毕执行环境就会被弹出执行栈。全局执行环境一开始就存在与执行栈之中，只有当浏览器关闭才会被销毁。</p>
+<p>这里只介绍了一些关于执行环境基本的知识，后面还会有更加详细的关于变量对象以及作用域链的理解。</p>
 
       
     </div>
@@ -479,8 +493,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/17/js中的some、find、findindex、includes、filter的使用/" rel="next" title="js中的some、find、findindex、includes、filter的使用">
-                <i class="fa fa-chevron-left"></i> js中的some、find、findindex、includes、filter的使用
+              <a href="/2019/07/19/JS原型链与继承/" rel="next" title="JS原型与原型链以及继承">
+                <i class="fa fa-chevron-left"></i> JS原型与原型链以及继承
               </a>
             
           </div>
@@ -488,10 +502,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/17/vue-js的学习（七）过滤器filter的使用/" rel="prev" title="vue.js的学习（七）过滤器filter的使用">
-                vue.js的学习（七）过滤器filter的使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -693,7 +703,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码和效果图"><span class="nav-number">2.</span> <span class="nav-text">代码和效果图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现原理"><span class="nav-number">3.</span> <span class="nav-text">实现原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习到的一些知识"><span class="nav-number">4.</span> <span class="nav-text">学习到的一些知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我遇到的一些坑与问题"><span class="nav-number">5.</span> <span class="nav-text">我遇到的一些坑与问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是执行环境"><span class="nav-number">2.</span> <span class="nav-text">什么是执行环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行环境与执行栈"><span class="nav-number">3.</span> <span class="nav-text">执行环境与执行栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行环境中的内容"><span class="nav-number">4.</span> <span class="nav-text">执行环境中的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
