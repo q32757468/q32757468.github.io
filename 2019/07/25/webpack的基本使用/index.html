@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="ranshan丶">
 <meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ebpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。这是webpack中">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-26T10:26:05.012Z">
+<meta property="og:updated_time" content="2019-07-26T11:10:06.121Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack的基本使用">
 <meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ebpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。这是webpack中">
@@ -542,13 +542,13 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const htmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>添加到 plugins 数组中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">plugins: [</span><br><span class="line">  new htmlWebpackPlugin(&#123;</span><br><span class="line">    template: path.resolve(__dirname, &apos;src/index.html&apos;),//模板路径</span><br><span class="line">    filename: &apos;index.html&apos;//自动生成的HTML文件的名称</span><br><span class="line">  &#125;)</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">plugins: [</span><br><span class="line">  new htmlWebpackPlugin(&#123;</span><br><span class="line">    template: path.resolve(__dirname, &apos;src/index.html&apos;),//源文件路径</span><br><span class="line">    filename: &apos;index.html&apos;//自动生成的HTML文件的名称</span><br><span class="line">  &#125;)</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>配置好以后就可以使用了，那么这款插件是起什么作用的呢，前面提到了 webpack-dev-server 插件会将js文件生成到根路径内存中，那么 html-webpack-plugin 这款插件也是类似的，将html文件生成到内存中，并且会将页面中原本对js的引用失效，换成对内存中在根路径的js文件的引用，刚好也解决了前面插件的问题，同时存放在内存中也能够提高运行速度。</p>
+<p>配置好以后就可以使用了，那么这款插件是起什么作用的呢，前面提到了 webpack-dev-server 插件会将js文件生成到根路径内存中，那么 html-webpack-plugin 这款插件也是类似的，将html文件生成到内存中，并且会将页面中原本对js的引用失效，换成对内存中在根路径的js文件的引用，刚好也解决了前面插件的问题，同时存放在内存中也能够提高运行速度，并且会在output.path的路径中生成一份由我们命名的html文件，方便管理，并且这个新生成的文件会自动引入入口js文件，所以在源文件中就要把原来对入口文件的引用去掉。</p>
 <h3 id="loaders"><a href="#loaders" class="headerlink" title="loaders"></a>loaders</h3><p>loader 用于对模块的源代码进行转换。当源代码中引入了非js模块的时候就有可能会出现无法打包的情况，这是因为webpack默认是无法处理除了js之外的文件的，那么此时就要用到各种各样的loader来帮助我们处理这些文件或者模块了。</p>
 <h4 id="css-loader"><a href="#css-loader" class="headerlink" title="css-loader"></a>css-loader</h4><p>在一个前端项目中我们除了js之外最长用到的应该就是css文件了，如果直接在入口文件中引入css文件的话在打包的时候就会报错，这是后就需要用相应的loader来处理了。</p>
-<p>像是这样直接使用就会报错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import $ from &apos;jquery&apos;</span><br><span class="line">import &apos;./index.css&apos;</span><br><span class="line">$(&apos;.test&apos;).html(&apos;这是一段新的文字&apos;);</span><br></pre></td></tr></table></figure></p>
+<p>像是这样直接使用就会报错：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> $ <span class="keyword">from</span> <span class="string">'jquery'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'./index.css'</span> </span><br><span class="line">$(<span class="string">'.test'</span>).html(<span class="string">'这是一段新的文字'</span>);</span><br></pre></td></tr></table></figure></p>
 <p>那么来看看如何使用 css loader：</p>
 <ol>
 <li><p>先是通过<code>$ npm i style-loader css-loader -D</code>来安装两个需要的loader</p>
@@ -869,7 +869,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共87.7k字</span>
+  <span class="post-count">博客全站共87.8k字</span>
 </div>-->
 
         
