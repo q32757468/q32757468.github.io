@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这次学习一下通过表单得到post方式来向后端上传文件，以及使用表单来上传文件的注意点及注意事项。">
+<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前面学习过了vue的一些基础的知识，但是都是直接开发，并没有使用webpack这样的打包工具，那么该如何通过webpack来开发一个vue项目呢，并且这样与直接开发有什么不一样的地方呢，就让我们来学习一下。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="通过post方式上传文件">
-<meta property="og:url" content="https://q32757468.github.io/2019/05/21/通过post方式上传文件/index.html">
+<meta property="og:title" content="vue-js的学习（在webpack中使用vue）">
+<meta property="og:url" content="https://q32757468.github.io/2019/07/28/vue-js的学习（在webpack中使用vue）/index.html">
 <meta property="og:site_name" content="ranshan丶">
-<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这次学习一下通过表单得到post方式来向后端上传文件，以及使用表单来上传文件的注意点及注意事项。">
+<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前面学习过了vue的一些基础的知识，但是都是直接开发，并没有使用webpack这样的打包工具，那么该如何通过webpack来开发一个vue项目呢，并且这样与直接开发有什么不一样的地方呢，就让我们来学习一下。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-21T03:19:52.215Z">
+<meta property="og:updated_time" content="2019-07-29T09:08:37.467Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="通过post方式上传文件">
-<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这次学习一下通过表单得到post方式来向后端上传文件，以及使用表单来上传文件的注意点及注意事项。">
+<meta name="twitter:title" content="vue-js的学习（在webpack中使用vue）">
+<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前面学习过了vue的一些基础的知识，但是都是直接开发，并没有使用webpack这样的打包工具，那么该如何通过webpack来开发一个vue项目呢，并且这样与直接开发有什么不一样的地方呢，就让我们来学习一下。">
 
 
 
@@ -121,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="https://q32757468.github.io/2019/05/21/通过post方式上传文件/">
+  <link rel="canonical" href="https://q32757468.github.io/2019/07/28/vue-js的学习（在webpack中使用vue）/">
 
 
 
@@ -137,7 +137,7 @@
   </script>
 
 
-  <title>通过post方式上传文件 | ranshan丶</title>
+  <title>vue-js的学习（在webpack中使用vue） | ranshan丶</title>
   
 
 
@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://q32757468.github.io/2019/05/21/通过post方式上传文件/">
+    <link itemprop="mainEntityOfPage" href="https://q32757468.github.io/2019/07/28/vue-js的学习（在webpack中使用vue）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hsl">
@@ -328,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">通过post方式上传文件</h1>
+          <h1 class="post-title" itemprop="name headline">vue-js的学习（在webpack中使用vue）</h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-21T10:21:09+08:00">
-                2019-05-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-28T17:09:12+08:00">
+                2019-07-28
               </time>
             
 
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  755
+                  2.1k
                 </span>
               
 
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  8
                 </span>
               
             </div>
@@ -417,23 +417,98 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这次学习一下通过表单得到post方式来向后端上传文件，以及使用表单来上传文件的注意点及注意事项。<br><a id="more"></a><br>先上代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"post上传文件.php"</span> <span class="attr">method</span>=<span class="string">"POST"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"upFile"</span> <span class="attr">id</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">name</span>=<span class="string">"tj"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前面学习过了vue的一些基础的知识，但是都是直接开发，并没有使用webpack这样的打包工具，那么该如何通过webpack来开发一个vue项目呢，并且这样与直接开发有什么不一样的地方呢，就让我们来学习一下。<br><a id="more"></a></p>
+</blockquote>
+<h3 id="在项目中安装vue"><a href="#在项目中安装vue" class="headerlink" title="在项目中安装vue"></a>在项目中安装vue</h3><p>在学习使用webpack之前我们在项目中都是直接使用 script 标签在项目中引入vue所需要的文件，那么现在通过webpack来构建项目的话就应该将所有的依赖都引入到入口文件当中，页面中只会引入一个入口文件。</p>
+<h4 id="通过npm来安装vue"><a href="#通过npm来安装vue" class="headerlink" title="通过npm来安装vue"></a>通过npm来安装vue</h4><ol>
+<li><p>先将vue安装进项目：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i vue -S</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后在入口文件中引入vue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>通过这样简单的安装引入就成功的将vue引入了项目当中</p>
+<h4 id="通过-vue-文件来设置组件"><a href="#通过-vue-文件来设置组件" class="headerlink" title="通过 .vue 文件来设置组件"></a>通过 .vue 文件来设置组件</h4><p>当我们执行完上面的引入操作，我们直接在入口文件中写一些相关的vue中的代码的话，会在浏览器的控制台中看见报错信息，意思大概就是我们引入的vue包是runtime的包，不能直接使用组件相关的东西。</p>
+<p>那我们要怎么样做呢？要解决这个问题只需要引入完整的vue包文件就好了，有三种方式：</p>
+<ul>
+<li><p>找到 <strong>node_modules</strong>中的vue项目包，然后修改它的 package.json ，将它提供给外部的入口文件修改为完整的那个：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;main&quot;: &quot;dist/vue.js&quot;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在项目的入口文件中修改引入的vue文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue/dist/vue&apos;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>值得注意的一件事情是这里的路径可以将前面的node_modules这个目录省略掉，会自动去这个目录中找我们提供的这个路径。</p>
 </blockquote>
 <ul>
-<li>这里之所以使用post方式上传而不使用get方式上传是因为get方式上传有文件大小方面的限制，最多2000个字符，所以使用post</li>
-<li>很正常的一个表单，设置了控件类型以及与后端交互时要用到的name</li>
-<li>但是要注意的是上传文件时除了要设置表单类型为 <code>file</code>之外，还需要给form添加一个<code>enctype</code>属性，并且把它的值设为<code>multipart/form-data</code>，只有这样才能正常上传。</li>
+<li>修改webpack的配置文件，加上以下代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">    alias: &#123;</span><br><span class="line">      &apos;vue$&apos;: &apos;vue/dist/vue.esm.js&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>我们再来看看php部分的代码：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">print_r($_FILES);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">'&lt;br&gt;'</span>;</span><br><span class="line">$fileInfo=$_FILES[<span class="string">'upFile'</span>];</span><br><span class="line">print_r($fileInfo);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>这个时候我们就不能再使用post方式来获取文件的内容了，我们需要用file方式。<br>我么再来看看打印的结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Array ( [tj] =&gt; 提交 ) //这个时候post变量获取到的东西就不是我们想要的东西了。</span><br><span class="line">Array ( [upFile] =&gt; Array ( [name] =&gt; 后面问题.png [type] =&gt; image/png [tmp_name] =&gt; E:\xampp\tmp\phpDC76.tmp [error] =&gt; 0 [size] =&gt; 32458 ) )  //而通过file变量获取到的数组里面就有我们想要的东西</span><br><span class="line">Array ( [name] =&gt; 后面问题.png [type] =&gt; image/png [tmp_name] =&gt; E:\xampp\tmp\phpDC76.tmp [error] =&gt; 0 [size] =&gt; 32458 )</span><br><span class="line">//然后再从数组中取出我们想要的文件，就可以得到文件的信息。</span><br></pre></td></tr></table></figure></p>
+<p>那么任选这三种办法中的其中一种都可以解决前面的问题，但是实际上并不推荐这样去做，因为在webpack中使用vue比较推荐另一种做法，就是使用<strong>render</strong>函数，通过 render 函数来引入vue组件，而这种组件是单独的以<code>.vue</code>后缀结尾的文件。</p>
+<h5 id="安装相关包和进行相关配置"><a href="#安装相关包和进行相关配置" class="headerlink" title="安装相关包和进行相关配置"></a>安装相关包和进行相关配置</h5><ol>
+<li><p>将相应的工具安装进项目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i vue-loader vue-template-compiler -D</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在webpack配置文件中配置好相应的匹配规则：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rules: [ // 匹配规则</span><br><span class="line">  &#123; test: /\.vue$/, use: &apos;vue-loader&apos; &#125;,//处理vue文件</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在webpack配置文件中配置好插件相应设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins: [</span><br><span class="line">  // 在webpack的4.x的版本中必须引入这个配置</span><br><span class="line">  new VueLoaderPlugin()</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>通过以上的安装和配置，一个基本的环境就配置好了，接下来来看看如何通过<code>.vue</code>文件来创建组件。</p>
+<h3 id="使用render函数"><a href="#使用render函数" class="headerlink" title="使用render函数"></a>使用render函数</h3><p>新建一个<code>.vue</code>文件，这个文件将会替代页面中一一开始的id为app的元素：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">//定义模板</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    这是一个测试内容</span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-text</span>=<span class="string">"msg"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line">// 定义业务逻辑</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="comment">//通过export default来向外暴露</span></span></span><br><span class="line"><span class="undefined">  data() &#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      msg: <span class="string">"这是一条消息"</span></span></span><br><span class="line"><span class="undefined">    &#125;;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">&#125;;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"></span><br><span class="line">//定义样式</span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>使用<strong>render</strong>函数引入前面定义的vue文件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//先将文件引入页面当中</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span></span><br><span class="line"><span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  <span class="comment">//再使用render函数使用到引入的组件</span></span><br><span class="line">  render: <span class="function"><span class="params">c</span> =&gt;</span> c(App),<span class="comment">//这里是使用了ES6中的箭头函数的语法进行了简写</span></span><br><span class="line">  data: &#123;</span><br><span class="line">    msg: <span class="string">'这是一个测试内容'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>这是render函数的完整写法：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElements</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> createElements(App)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>经过这些操作以后页面中原本的 #app 的div块就会被替换为 引入的 App组件，所以要注意的是不要在里面写任何东西，因为会被替换掉。以后需要在其中引入其他的组件就直接在App组件中引入就可以了。</p>
+<h3 id="在webpack中使用vue-router"><a href="#在webpack中使用vue-router" class="headerlink" title="在webpack中使用vue-router"></a>在webpack中使用vue-router</h3><p>前面已经学习过了如何使用vue-router，其实在webpack中使用vue-router的方式还是差不多的，只不过最主要的区别就是引入包和引入各个组件的时候有区别了。</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i vue-router -S</span><br></pre></td></tr></table></figure>
+<h4 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;</span><br><span class="line">import VueRouter from &apos;vue-router&apos;</span><br></pre></td></tr></table></figure>
+<h4 id="使用vue加载"><a href="#使用vue加载" class="headerlink" title="使用vue加载"></a>使用vue加载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.use(VueRouter)</span><br></pre></td></tr></table></figure>
+<h4 id="一个简单的小例子："><a href="#一个简单的小例子：" class="headerlink" title="一个简单的小例子："></a>一个简单的小例子：</h4><p>除了前面的安装方面的区别之外，其他的几乎没有什么区别了，要是有区别的话也只是在组件的定义方面存在区别，来看一个简单的小例子：</p>
 <ul>
-<li>但是其实这个时候也不是我们想要的结果，因为我们会发现 <code>E:\xampp\tmp\</code>这个目录下是空的，并没有我们上传的文件</li>
-<li>这是因为这其实是一个临时文件夹，如果我们需要永久保存我们想要的内容我们需要将文件保存到我们自己建立的一个文件夹中。</li>
-<li>这个时候我们就需要使用到这个函数<code>move_uploaded_file(file,newloc)</code><br>第一个参数规定文件的原路径，第二个参数规定文件的新路径已经文件名。</li>
+<li><p>这是网页文件：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"icon"</span> <span class="attr">href</span>=<span class="string">"data:image/ico;base64,aWNv"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这是入口文件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span></span><br><span class="line"><span class="comment">//如果涉及到很多的路由组件，可以将这些路由组件单独放到一个js文件当中，然后就只要引入这一个js文件就可以引入所有的路由组件。</span></span><br><span class="line"><span class="keyword">import</span> login <span class="keyword">from</span> <span class="string">'./login.vue'</span></span><br><span class="line"><span class="keyword">import</span> register <span class="keyword">from</span> <span class="string">'./register.vue'</span></span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter)</span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/'</span>, <span class="attr">redirect</span>: <span class="string">'/login'</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/login'</span>, <span class="attr">component</span>: login &#125;,</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/register'</span>, <span class="attr">component</span>: register &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  render: <span class="function"><span class="params">c</span> =&gt;</span> c(App),</span><br><span class="line">  router,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这是render的组件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义模板</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;router-link to=<span class="string">"/login"</span>&gt;登录&lt;<span class="regexp">/router-link&gt;</span></span><br><span class="line"><span class="regexp">    &lt;router-link to="/</span>register<span class="string">"&gt;注册&lt;/router-link&gt;</span></span><br><span class="line"><span class="string">    &lt;router-view&gt;&lt;/router-view&gt;</span></span><br><span class="line"><span class="string">  &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/template&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">// 定义业务逻辑</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">export default &#123;</span></span><br><span class="line"><span class="string">  //通过export default来向外暴露</span></span><br><span class="line"><span class="string">  data() &#123;</span></span><br><span class="line"><span class="string">    return &#123;</span></span><br><span class="line"><span class="string">      msg: "</span>这是一条消息<span class="string">"</span></span><br><span class="line"><span class="string">    &#125;;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string">&lt;/script&gt; </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义样式</span></span><br><span class="line"><span class="string">&lt;style&gt;</span></span><br><span class="line"><span class="string">&lt;/style&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>login组件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;这是登录组件&lt;/h1&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped &gt;</span><br><span class="line">div &#123;</span><br><span class="line">  color: beige;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>register组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;这是注册组件&lt;/h1&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>下面将代码改进一下：<br>加上一行代码：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">move_uploaded_file($fileInfo[<span class="string">'tmp_name'</span>],<span class="string">"./test_imgs/"</span>.$fileInfo[<span class="string">'name'</span>]);</span><br></pre></td></tr></table></figure></p>
-<p>这个时候我们再看设置的那个新路径，就已经成功将文件移动过来了。</p>
-<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>上传文件的表单与其他表单有些许不一样，要多注意，获取内容的方法也不太一样，并且要注意<code>move_uploaded_file</code>函数的使用，第二个参数写相对路径的时候，如果是相对与当前路径开始的话一定不能遗漏了<code>./</code>来表示当前路径，比如我刚开始这样写就报错：<code>&quot;test_imgs/&quot;</code>,而这样写就是对的:<code>&quot;./test_imgs/&quot;</code>所以以后要多注意。</p>
+<p>可以看出用法还是和以前差不多，只不过用来一些新东西而已，每个组件都是一个单独的vue文件。</p>
+<h3 id="单独的-vue文件"><a href="#单独的-vue文件" class="headerlink" title="单独的.vue文件"></a>单独的<code>.vue文件</code></h3><p>前面已经看到了 .vue 是如何使用了，那么现在来详细讲一讲这类文件的一些细节：</p>
+<ul>
+<li><p>可以看出 .vue 文件主要分成三部分，一部分是模板部分，这个是组件的模板，就像是原先直接在html中通过<strong>template</strong>标签定义模板那样，并且也是一样的用法，只不过是换了一个地方使用。</p>
+</li>
+<li><p>第二个是<strong>script</strong>部分，这个是用来处理业务逻辑的部分，其实就是一个vue的实例的对象，只不过需要通过<code>export default</code>将其暴露出去。</p>
+</li>
+<li><p>第三个部分就是样式部分，这个部分就更好理解了，是用来定义组件的样式的，但是又两点要注意：</p>
+<ul>
+<li>可以设置书写样式的语言：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;less&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;style lang=&quot;sass&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>可以通过这个lang属性来设置语言，如果不设置默认就是css.</p>
+<ul>
+<li><p>可以设置样式的作用域：</p>
+<p>默认是全部生效的作用域，什么意思呢，就是在这种情况下设置的样式会应用到页面中所有符合条件的元素上。</p>
+<p>通常情况下会这样设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;style scoped&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>加一个<code>scope</code>属性就只对当前组件有效。</p>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>看到这里就明白vue的组件化开发的便利之处了，把网页当成若干个组件，方便维护管理，并且有着很高的可复用性，并且本身就是只关心业务逻辑，使得开发简化，佩服佩服。</p>
 
       
     </div>
@@ -469,8 +544,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/20/jQuery中eq与get的区别/" rel="next" title="jQuery中eq与get的区别">
-                <i class="fa fa-chevron-left"></i> jQuery中eq与get的区别
+              <a href="/2019/07/25/webpack的基本使用/" rel="next" title="webpack的基本使用">
+                <i class="fa fa-chevron-left"></i> webpack的基本使用
               </a>
             
           </div>
@@ -479,8 +554,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/21/初识cookie/" rel="prev" title="cookie的学习以及使用">
-                cookie的学习以及使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/30/GIT的基本使用/" rel="prev" title="GIT的基本使用">
+                GIT的基本使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -683,7 +758,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结："><span class="nav-number">2.</span> <span class="nav-text">总结：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在项目中安装vue"><span class="nav-number">2.</span> <span class="nav-text">在项目中安装vue</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过npm来安装vue"><span class="nav-number">2.1.</span> <span class="nav-text">通过npm来安装vue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过-vue-文件来设置组件"><span class="nav-number">2.2.</span> <span class="nav-text">通过 .vue 文件来设置组件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装相关包和进行相关配置"><span class="nav-number">2.2.1.</span> <span class="nav-text">安装相关包和进行相关配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用render函数"><span class="nav-number">3.</span> <span class="nav-text">使用render函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在webpack中使用vue-router"><span class="nav-number">4.</span> <span class="nav-text">在webpack中使用vue-router</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">4.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引入"><span class="nav-number">4.2.</span> <span class="nav-text">引入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用vue加载"><span class="nav-number">4.3.</span> <span class="nav-text">使用vue加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个简单的小例子："><span class="nav-number">4.4.</span> <span class="nav-text">一个简单的小例子：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单独的-vue文件"><span class="nav-number">5.</span> <span class="nav-text">单独的.vue文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
