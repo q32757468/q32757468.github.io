@@ -81,16 +81,17 @@
 
 
 
-<meta name="description" content="你看见了吗，那有一座山。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ranshan丶">
-<meta property="og:url" content="https://q32757468.github.io/archives/2019/index.html">
+<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;我们经常会有需求需要实现可以通过鼠标滚轮来进行翻页或者是对应用的切换，那么这个时候就需要用到鼠标滚轮事件了，并且大部分时候都需要进行一定的优化以提升用户体验，这也是我在这段时间开发chrome插件时所遇到的一些问题，来看看我是怎么解决的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS鼠标滚轮事件">
+<meta property="og:url" content="https://q32757468.github.io/2019/08/13/JS鼠标滚轮事件/index.html">
 <meta property="og:site_name" content="ranshan丶">
-<meta property="og:description" content="你看见了吗，那有一座山。">
+<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;我们经常会有需求需要实现可以通过鼠标滚轮来进行翻页或者是对应用的切换，那么这个时候就需要用到鼠标滚轮事件了，并且大部分时候都需要进行一定的优化以提升用户体验，这也是我在这段时间开发chrome插件时所遇到的一些问题，来看看我是怎么解决的。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-13T13:58:54.034Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ranshan丶">
-<meta name="twitter:description" content="你看见了吗，那有一座山。">
+<meta name="twitter:title" content="JS鼠标滚轮事件">
+<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;我们经常会有需求需要实现可以通过鼠标滚轮来进行翻页或者是对应用的切换，那么这个时候就需要用到鼠标滚轮事件了，并且大部分时候都需要进行一定的优化以提升用户体验，这也是我在这段时间开发chrome插件时所遇到的一些问题，来看看我是怎么解决的。">
 
 
 
@@ -120,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="https://q32757468.github.io/archives/2019/">
+  <link rel="canonical" href="https://q32757468.github.io/2019/08/13/JS鼠标滚轮事件/">
 
 
 
@@ -136,7 +137,7 @@
   </script>
 
 
-  <title>归档 | ranshan丶</title>
+  <title>JS鼠标滚轮事件 | ranshan丶</title>
   
 
 
@@ -155,7 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://q32757468.github.io" class="github-corner" aria-label="View source on GitHub">
     <svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff;
@@ -296,390 +297,230 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://q32757468.github.io/2019/08/13/JS鼠标滚轮事件/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hsl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ranshan丶">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
-         
+          <h1 class="post-title" itemprop="name headline">JS鼠标滚轮事件</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-13T21:16:11+08:00">
+                2019-08-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        好! 目前共计 75 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/14/测试文章/" itemprop="url">
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">测试文章</span>
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1k
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-14T18:20:05+08:00" content="2019-08-14">
-          08-14
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/13/JS鼠标滚轮事件/" itemprop="url">
-              
-                <span itemprop="name">JS鼠标滚轮事件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-13T21:16:11+08:00" content="2019-08-13">
-          08-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/10/通过百度API添加搜索小功能/" itemprop="url">
-              
-                <span itemprop="name">通过百度API添加搜索小功能</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-10T21:34:07+08:00" content="2019-08-10">
-          08-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们经常会有需求需要实现可以通过鼠标滚轮来进行翻页或者是对应用的切换，那么这个时候就需要用到鼠标滚轮事件了，并且大部分时候都需要进行一定的优化以提升用户体验，这也是我在这段时间开发chrome插件时所遇到的一些问题，来看看我是怎么解决的。<br><a id="more"></a></p>
+</blockquote>
+<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><p>鼠标滚轮事件相较于其他基本的事件使用起来会稍微麻烦那么一点点，我这里采用的jQuery的写法：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 因为firefox浏览器对于鼠标滚轮事件的处理和其他浏览器不太一样，所以这里要注意兼容处理</span></span><br><span class="line">$(<span class="built_in">document</span>).on(<span class="string">'mousewheel DOMMouseScroll'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  e = e || <span class="built_in">window</span>.event;</span><br><span class="line">  <span class="keyword">let</span> delta = e.originalEvent.wheelDelta || e.originalEvent.detail; <span class="comment">//后者是对Firefox的兼容</span></span><br><span class="line">  <span class="keyword">if</span> (delta &gt; <span class="number">0</span>) &#123;  </span><br><span class="line">  <span class="comment">// 这里写滚轮上滚时的代码</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'上滚'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (delta &lt; <span class="number">0</span>) &#123;</span><br><span class="line">  <span class="comment">// 这里写滚轮下滚时的代码</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'下滚'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这就是最简单的使用方式了。但是如果我们直接这样使用的话会出现一个问题，那就是当我们快速的滚动多次鼠标滚轮，那么此时就会触发多次的事件，其实这个时候用户体验是很不好的，因为大部分人都会习惯滑鼠标滚轮不止一格，并且有些鼠标也不好控制轻轻的只划一格，那么这个时候就需要进行一定的优化来解决这个问题了。</p>
+<h3 id="优化方式一"><a href="#优化方式一" class="headerlink" title="优化方式一"></a>优化方式一</h3><p>方式一的优化原理就是在一次鼠标滚轮事件之后将滚轮事件与元素解绑，然后用定时器来设置一定时间后再次进行绑定：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setDiff</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="built_in">document</span>).on(<span class="string">'mousewheel DOMMouseScroll'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    e = e || <span class="built_in">window</span>.event;</span><br><span class="line">    <span class="keyword">let</span> delta = e.originalEvent.wheelDelta || e.originalEvent.detail;</span><br><span class="line">    $(<span class="built_in">document</span>).off(<span class="string">"mousewheel DOMMouseScroll"</span>);</span><br><span class="line">    <span class="keyword">if</span> (delta &gt; <span class="number">0</span>) &#123; <span class="comment">//当滑轮向上滚动时  </span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'上滚'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (delta &lt; <span class="number">0</span>) &#123; <span class="comment">//当滑轮向下滚动时  </span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'下滚'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    setTimeout(setDiff, <span class="number">500</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">setDiff();</span><br></pre></td></tr></table></figure></p>
+<p>当这样优化之后，无论怎么样的滚动鼠标滚轮，两次滚轮事件之间最少都要间隔 500ms 了。</p>
+<p>虽然这样的方式是可行的，但是也存在着极端的情况，加入用户进行了一次超级长的鼠标滚轮，那么就可能触发多次滚轮事件，而我在开发chrome插件的时候预期想要的效果是在一次连续的滚动过程中，无论连续滚动了多长时间，只有第一次滚轮事件会生效，后面的都会无效，因为如果实现这样的效果就无需设置时间来控制事件的触发频率，大大的增加灵活性。后面经过思考与尝试，我还是实现了我的思路。</p>
+<h3 id="优化方式二"><a href="#优化方式二" class="headerlink" title="优化方式二"></a>优化方式二</h3><p>为了实现前面所提到的效果最终我想到可以通过判断两次事件触发的间隔来确定是否要执行事件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setDiff</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> preTime = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">  $(<span class="built_in">document</span>).on(<span class="string">'mousewheel DOMMouseScroll'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> diff = (<span class="keyword">new</span> <span class="built_in">Date</span>()) - preTime;</span><br><span class="line">    <span class="keyword">if</span> (diff &gt; <span class="number">300</span>) &#123;</span><br><span class="line">      e = e || <span class="built_in">window</span>.event;</span><br><span class="line">      <span class="keyword">let</span> delta = e.originalEvent.wheelDelta || e.originalEvent.detail;  <span class="comment">//后者Firefox</span></span><br><span class="line">      <span class="comment">// $(document).off("mousewheel DOMMouseScroll");</span></span><br><span class="line">      <span class="keyword">if</span> (delta &gt; <span class="number">0</span>) &#123; <span class="comment">//当滑轮向上滚动时  </span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'上滚'</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (delta &lt; <span class="number">0</span>) &#123; <span class="comment">//当滑轮向下滚动时  </span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'下滚'</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    preTime = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">setDiff();</span><br></pre></td></tr></table></figure></p>
+<p>这样优化之后，只要是连续的滚动鼠标滚轮，那么一定只会触发第一次事件，当用户松开滚轮，进行下一次滚动时，间隔时间够长，就又可以触发一次滚轮事件，但是后面连续的所有事件因为间隔时间十分之短，就不会被触发，就达到了我的目的。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这也是我第一次使用鼠标的滚轮事件，结合网上的一些内容以及自己的一些思考，最终还是完成了自己的需求，并且对代码进行了简化，虽然花了一些时间，但是肯定是值得的。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/08/vue实现轮播图组件/" itemprop="url">
-              
-                <span itemprop="name">vue实现轮播图组件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-08T19:53:49+08:00" content="2019-08-08">
-          08-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/07/详解使用jQuery实现滑动轮播图/" itemprop="url">
-              
-                <span itemprop="name">详解使用jQuery实现滑动轮播图</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-07T21:48:50+08:00" content="2019-08-07">
-          08-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/06/使用vue来实现选项卡/" itemprop="url">
-              
-                <span itemprop="name">使用vue来实现选项卡</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-06T10:54:14+08:00" content="2019-08-06">
-          08-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/30/GIT的基本使用/" itemprop="url">
-              
-                <span itemprop="name">GIT的基本使用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-30T16:50:35+08:00" content="2019-07-30">
-          07-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/28/vue-js的学习（在webpack中使用vue）/" itemprop="url">
-              
-                <span itemprop="name">vue-js的学习（在webpack中使用vue）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-28T17:09:12+08:00" content="2019-07-28">
-          07-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/25/webpack的基本使用/" itemprop="url">
-              
-                <span itemprop="name">webpack的基本使用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-25T22:43:46+08:00" content="2019-07-25">
-          07-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/21/理解JS中的执行环境/" itemprop="url">
-              
-                <span itemprop="name">理解JS中的执行环境</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-21T19:18:41+08:00" content="2019-07-21">
-          07-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-smile-o"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/10/通过百度API添加搜索小功能/" rel="next" title="通过百度API添加搜索小功能">
+                <i class="fa fa-chevron-left"></i> 通过百度API添加搜索小功能
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/14/测试文章/" rel="prev" title="测试文章">
+                测试文章 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2019/page/8/">8</a><a class="extend next" rel="next" href="/archives/2019/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -687,6 +528,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzAzMS8xOTU3Nw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -709,8 +559,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -807,6 +666,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本使用"><span class="nav-number">2.</span> <span class="nav-text">基本使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化方式一"><span class="nav-number">3.</span> <span class="nav-text">优化方式一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化方式二"><span class="nav-number">4.</span> <span class="nav-text">优化方式二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -965,6 +840,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -993,6 +872,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

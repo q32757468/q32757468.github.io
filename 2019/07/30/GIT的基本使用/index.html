@@ -56,10 +56,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/./source/images/favicon.ico?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/./images/favicon.ico?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/./source/images/favicon.ico?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/./images/favicon.ico?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
@@ -89,7 +89,7 @@
 <meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Git是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。在开发中也是经常用到的工具，在了解到GIT之前我就想过有没有什么工具可以方便的进行回退之类的将文件管理起来的工具，直到我慢慢的知道了GIT，并且学会了如何使用它，就知道了其实管理文件起始也挺简单的。这里就介绍以下GIT的常">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/aE*x*FXlMLUO*EkQRrvekD9Kn1x7DLBlK5ICxFKT7pY!/b/dIMAAAAAAAAA&bo=AQUQAgAAAAADBzQ!&rf=viewer_4">
-<meta property="og:updated_time" content="2019-07-31T04:16:00.210Z">
+<meta property="og:updated_time" content="2019-08-12T04:55:44.322Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GIT的基本使用">
 <meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Git是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。在开发中也是经常用到的工具，在了解到GIT之前我就想过有没有什么工具可以方便的进行回退之类的将文件管理起来的工具，直到我慢慢的知道了GIT，并且学会了如何使用它，就知道了其实管理文件起始也挺简单的。这里就介绍以下GIT的常">
@@ -381,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.5k
+                  2.1k
                 </span>
               
 
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  7
                 </span>
               
             </div>
@@ -449,7 +449,13 @@
 <h4 id="git-checkout-–-file"><a href="#git-checkout-–-file" class="headerlink" title="git checkout  – file"></a>git checkout  – file</h4><p>通过此命令可以丢弃工作区中的内容</p>
 <p>如果该文件的修改提交到了暂存区就会恢复到暂存区时的样子</p>
 <p>如果没有提交到暂存区就会恢复到和版本库一致。</p>
-<h3 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h3><h4 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h4><p>查看分支：git branch</p>
+<h4 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h4><p>通过此命令可以将当前工作区的工作状态储藏起来，这样就可以方便的切换到其他分支上进行工作。</p>
+<p>可以通过查看储藏列表：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash list</span><br></pre></td></tr></table></figure></p>
+<p>可以通过<code>git stash apply</code>恢复到最近的储藏，也可以恢复到指定的储藏：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash apply stash@&#123;2&#125;</span><br></pre></td></tr></table></figure></p>
+<p>默认只会恢复文件的更改，并不会恢复暂存，如果要恢复暂存则需要添加一个<code>--index</code>选项：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash apply --index</span><br></pre></td></tr></table></figure></p>
+<p>可以通过<code>git stash drop@{2}</code>来删除指定储藏，也可以恢复之后立即删除：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash pop</span><br></pre></td></tr></table></figure></p>
+<p>如果想要反悔恢复的储藏，可以这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash show -p stash@&#123;0&#125; | git apply -R</span><br></pre></td></tr></table></figure></p>
+<h4 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h4><p>查看分支：git branch</p>
 <p>创建分支：git branch name</p>
 <p>切换分支：git checkout name</p>
 <p>创建+切换分支：git checkout –b name</p>
@@ -463,7 +469,61 @@
 <p>这里的 origin只是一个名字以后，代表的是远程仓库在本地使用过程中的一个代号，可以取其他名字。在绑定分支的会用到这个名字：</p>
 <p>向远程仓库提交时：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure></p>
 <p>意思就是将本地的当前分支的内容推到远程的 master 中。获取也是一样的。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这里介绍了一些GIT常见的也比较简单的用法，足够平时使用了。</p>
+<h3 id="忽略提交"><a href="#忽略提交" class="headerlink" title="忽略提交"></a>忽略提交</h3><p>有时我们会需求并不是所有文件都需要进行追踪提交，比如说开发工具或者是临时文件之类的，那么这个时候我们就可以通过配置 .gitignore 这个文件来配置需要忽略的文件。</p>
+<p>在 .gitignore 文件中每一行代表一个忽略规则。</p>
+<p>配置语法：</p>
+<ul>
+<li><p>以斜杠“/”开头表示目录；</p>
+</li>
+<li><p>以星号“*”通配多个字符；</p>
+</li>
+<li><p>以问号“?”通配单个字符</p>
+</li>
+<li><p>以方括号“[]”包含单个字符的匹配列表；</p>
+</li>
+<li><p>以叹号“!”表示不忽略(跟踪)匹配到的文件或目录。</p>
+</li>
+<li><p>**匹配多级目录，可在开始，中间，结束</p>
+</li>
+</ul>
+<p>忽略规则也存在优先级（由高到低）：</p>
+<ul>
+<li><p>从命令行中读取可用的忽略规则</p>
+</li>
+<li><p>当前目录定义的规则</p>
+</li>
+<li><p>父级目录定义的规则，依次地推</p>
+</li>
+<li><p>$GIT_DIR/info/exclude 文件中定义的规则</p>
+</li>
+<li><p>core.excludesfile中定义的全局规则</p>
+</li>
+</ul>
+<p>常用规则示例：</p>
+<ul>
+<li><p>bin/: 忽略当前路径下的bin文件夹，该文件夹下的所有内容都会被忽略，不忽略 bin 文件</p>
+</li>
+<li><p>/bin: 忽略根目录下的bin文件</p>
+</li>
+<li><p>/*.c: 忽略 cat.c，不忽略 build/cat.c</p>
+</li>
+<li><p>debug/*.obj: 忽略 debug/io.obj，不忽略 debug/common/io.obj 和 tools/debug/io.obj</p>
+</li>
+<li><p>**/foo: 忽略/foo, a/foo, a/b/foo等</p>
+</li>
+<li><p>a/**/b: 忽略a/b, a/x/b, a/x/y/b等</p>
+</li>
+<li><p>!/bin/run.sh: 不忽略 bin 目录下的 run.sh 文件</p>
+</li>
+<li><p>*.log: 忽略所有 .log 文件</p>
+</li>
+<li><p>config.php: 忽略当前路径的 config.php 文件</p>
+</li>
+</ul>
+<blockquote>
+<p>要注意的一件事情是.gitignore文件只能忽略那些没有被追踪的文件，已经被追踪的文件对于 .gitignore文件来说是无效的。</p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这里介绍了一些GIT常见的也比较简单的用法，平时常用的也不多，其他的知道了解就好了。</p>
 
       
     </div>
@@ -623,7 +683,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">73</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -713,7 +773,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先来了解几个概念"><span class="nav-number">2.</span> <span class="nav-text">先来了解几个概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作区"><span class="nav-number">2.1.</span> <span class="nav-text">工作区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#暂存区"><span class="nav-number">2.2.</span> <span class="nav-text">暂存区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地仓库"><span class="nav-number">2.3.</span> <span class="nav-text">本地仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#远程仓库"><span class="nav-number">2.4.</span> <span class="nav-text">远程仓库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GIT常用命令"><span class="nav-number">3.</span> <span class="nav-text">GIT常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#git-init"><span class="nav-number">3.1.</span> <span class="nav-text">git init</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-clone"><span class="nav-number">3.2.</span> <span class="nav-text">git clone</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-add"><span class="nav-number">3.3.</span> <span class="nav-text">git add</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-status"><span class="nav-number">3.4.</span> <span class="nav-text">git status</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-diff"><span class="nav-number">3.5.</span> <span class="nav-text">git diff</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-commit"><span class="nav-number">3.6.</span> <span class="nav-text">git commit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-reset-HEAD"><span class="nav-number">3.7.</span> <span class="nav-text">git reset HEAD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-reset-–hard-HEAD"><span class="nav-number">3.8.</span> <span class="nav-text">git reset  –hard HEAD^</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-checkout-–-file"><span class="nav-number">3.9.</span> <span class="nav-text">git checkout  – file</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支操作"><span class="nav-number">4.</span> <span class="nav-text">分支操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本命令"><span class="nav-number">4.1.</span> <span class="nav-text">基本命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决冲突"><span class="nav-number">4.2.</span> <span class="nav-text">解决冲突</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程仓库管理"><span class="nav-number">5.</span> <span class="nav-text">远程仓库管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先来了解几个概念"><span class="nav-number">2.</span> <span class="nav-text">先来了解几个概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作区"><span class="nav-number">2.1.</span> <span class="nav-text">工作区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#暂存区"><span class="nav-number">2.2.</span> <span class="nav-text">暂存区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地仓库"><span class="nav-number">2.3.</span> <span class="nav-text">本地仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#远程仓库"><span class="nav-number">2.4.</span> <span class="nav-text">远程仓库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GIT常用命令"><span class="nav-number">3.</span> <span class="nav-text">GIT常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#git-init"><span class="nav-number">3.1.</span> <span class="nav-text">git init</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-clone"><span class="nav-number">3.2.</span> <span class="nav-text">git clone</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-add"><span class="nav-number">3.3.</span> <span class="nav-text">git add</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-status"><span class="nav-number">3.4.</span> <span class="nav-text">git status</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-diff"><span class="nav-number">3.5.</span> <span class="nav-text">git diff</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-commit"><span class="nav-number">3.6.</span> <span class="nav-text">git commit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-reset-HEAD"><span class="nav-number">3.7.</span> <span class="nav-text">git reset HEAD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-reset-–hard-HEAD"><span class="nav-number">3.8.</span> <span class="nav-text">git reset  –hard HEAD^</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-checkout-–-file"><span class="nav-number">3.9.</span> <span class="nav-text">git checkout  – file</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-stash"><span class="nav-number">3.10.</span> <span class="nav-text">git stash</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本命令"><span class="nav-number">3.11.</span> <span class="nav-text">基本命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决冲突"><span class="nav-number">3.12.</span> <span class="nav-text">解决冲突</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程仓库管理"><span class="nav-number">4.</span> <span class="nav-text">远程仓库管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#忽略提交"><span class="nav-number">5.</span> <span class="nav-text">忽略提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -757,7 +817,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共97.6k字</span>
+  <span class="post-count">博客全站共99.8k字</span>
 </div>-->
 
         
