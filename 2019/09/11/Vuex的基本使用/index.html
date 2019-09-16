@@ -91,7 +91,7 @@
 <meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/MOPKs8cQWsBGqhcFPp9FBaS4PJmKzKX2jdjDWGHzkN0!/b/dL4AAAAAAAAA&bo=FAEvAAAAAAADBxg!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/FO1*dV28OJjel4VR6FqH7KJVf6jBdmrgJDA540jvBTo!/b/dL4AAAAAAAAA&bo=sgFBAAAAAAADB9A!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/Wr3laexW93nJPZyimOu.efGUQ1HBnZnuuY8cikitiBI!/b/dL8AAAAAAAAA&bo=cQFfAAAAAAADBw0!&rf=viewer_4">
-<meta property="og:updated_time" content="2019-09-11T14:41:42.342Z">
+<meta property="og:updated_time" content="2019-09-14T08:39:43.612Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vuex的基本使用">
 <meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Vuex作为vue全家桶之一，使用vue开发的过程中有着无可替代的作用，可以解决多个组件中传值的问题，并且本身的使用也非常的简单，有着非常强大的作用。我把它理解为一个数据共享中心，所有的组件都共享这里面的数据，并且都可以对其中的数据进行修改。来看看它是如何发挥作用的。">
@@ -383,7 +383,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.8k
+                  2.6k
                 </span>
               
 
@@ -399,7 +399,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  10
                 </span>
               
             </div>
@@ -465,6 +465,22 @@
 </li>
 </ul>
 <p>在不需要异步任务的情况下直接使用 mutations 和使用 action的结果没有什么区别，主要区别就是在需要异步的情况下，推荐是无论什么情况都使用action来提交。</p>
+<h3 id="使用-mapState-、mapGetters-、-mapMutations"><a href="#使用-mapState-、mapGetters-、-mapMutations" class="headerlink" title="使用 mapState 、mapGetters 、 mapMutations"></a>使用 mapState 、mapGetters 、 mapMutations</h3><p>在官方文档中者三个方法被称为辅助函数，这样理解是没有什么问题的，因为作用其实也就是使我们使用vux更加的简便，拿来看看他们究竟能起到怎么样的作用：</p>
+<p>  如果我们<strong>不使用这些辅助函数</strong>，那么我们经常要很繁琐的书写一些代码来使用vuex，就像是这样：<br>  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是getters count+1后的数值：&#123;&#123;this.$store.getters.countAdd1&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>  可以看出这里通过<code>this.$store.getters</code>这么长的代码来获取数据是非常不方便的一件事情，所以就需要<strong>使用辅助函数</strong>,辅助函数的使用也是非常的简单，我们一个个来看一下（一样的还是基于前面的例子）。</p>
+<h4 id="mapState-辅助函数"><a href="#mapState-辅助函数" class="headerlink" title="mapState 辅助函数"></a>mapState 辅助函数</h4><p>使用之前需要将其引入：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapState &#125; <span class="keyword">from</span> <span class="string">"vuex"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>在 <code>computed</code>中使用：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  <span class="comment">//这里使用了扩展运算符，将mapState返回的对象扩展到computed对象当中，以保证不会影响 computed 原本的使用。</span></span><br><span class="line">  ...mapState(&#123;</span><br><span class="line">    <span class="comment">// 第一种方式，使用箭头函数，通过mapState将state中的count映射为此组件date中的count</span></span><br><span class="line">    count: <span class="function"><span class="params">state</span> =&gt;</span> state.count</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 更加简便的一种写法，与上面的作用是相同的</span></span><br><span class="line">    <span class="comment">// count: "count",</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 因为键值都是一样的，所以还可以写的更加的简单</span></span><br><span class="line">    <span class="comment">// count,</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 为了不改变this的指向，必须用常规函数</span></span><br><span class="line">    <span class="comment">// count(state) &#123;</span></span><br><span class="line">    <span class="comment">//   return state.count + this.localCount;</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里这几种写法的结果都是一样的，可以根据情况进行选择，这样使用之后的结果都是一样的。</p>
+<p>之后就可以像使用data中的数据一样使用原本state中的数据了:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是count的数值：&#123;&#123;count&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>当页面中重复使用到同一数据的时候就可以提供很大的便利。</p>
+<h4 id="mapState-辅助函数-1"><a href="#mapState-辅助函数-1" class="headerlink" title="mapState 辅助函数"></a>mapState 辅助函数</h4><p>使用之前需要将其引入：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapGetters &#125; <span class="keyword">from</span> <span class="string">"vuex"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>同样也是在<code>computed</code>中使用，使用起来与 mapState 类似：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  ...mapGetters([<span class="string">"countAdd1"</span>]) <span class="comment">//这里是使用的数组的形式，也可以使用对来来进行重命名</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>之后使用起来也就更加的简便了：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是getters count+1后的数值：&#123;&#123;countAdd1&#125;&#125;很棒！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="mapMutations-辅助函数"><a href="#mapMutations-辅助函数" class="headerlink" title="mapMutations  辅助函数"></a>mapMutations  辅助函数</h4><p>当我们在组件中对 mutations 进行提交的时候就可以使用 mapMutations 来进行简化。</p>
+<p>同样使用前需进行引入：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapMutations &#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br></pre></td></tr></table></figure></p>
+<p>这里引用了官网的例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...mapMutations([</span><br><span class="line">      <span class="string">'increment'</span>, <span class="comment">// 将 `this.increment()` 映射为 `this.$store.commit('increment')`</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">// `mapMutations` 也支持载荷：</span></span><br><span class="line">      <span class="string">'incrementBy'</span> <span class="comment">// 将 `this.incrementBy(amount)` 映射为 `this.$store.commit('incrementBy', amount)`</span></span><br><span class="line">    ]),</span><br><span class="line">    ...mapMutations(&#123;</span><br><span class="line">      add: <span class="string">'increment'</span> <span class="comment">// 将 `this.add()` 映射为 `this.$store.commit('increment')`</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>之后我们在组件中使用的时候就会变得更加简便：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"add"</span> @<span class="attr">click</span>=<span class="string">"increment"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> 在大量重复使用同一数据的情况下使用辅助函数可以提供便利，所以根据情况合理使用吧！</strong></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>vuex是一个简单使用的工具，但是功能很强大，可以解决很多的问题，在适当的场景适当使用可以发挥很强作用。</p>
 
       
@@ -625,7 +641,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">79</span>
+                  <span class="site-state-item-count">82</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -715,7 +731,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用法"><span class="nav-number">3.</span> <span class="nav-text">用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#store-js"><span class="nav-number">4.</span> <span class="nav-text">store.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在组件中使用"><span class="nav-number">5.</span> <span class="nav-text">在组件中使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在组件中直接使用了state中的数据："><span class="nav-number">5.1.</span> <span class="nav-text">在组件中直接使用了state中的数据：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过-getters获得计算后的值："><span class="nav-number">5.2.</span> <span class="nav-text">通过 getters获得计算后的值：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过-mutations-来修改数据"><span class="nav-number">5.3.</span> <span class="nav-text">通过 mutations 来修改数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#action-的使用"><span class="nav-number">5.4.</span> <span class="nav-text">action 的使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-mutations-和-action-来进行修改数据的区别"><span class="nav-number">6.</span> <span class="nav-text">使用 mutations 和 action 来进行修改数据的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用法"><span class="nav-number">3.</span> <span class="nav-text">用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#store-js"><span class="nav-number">4.</span> <span class="nav-text">store.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在组件中使用"><span class="nav-number">5.</span> <span class="nav-text">在组件中使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在组件中直接使用了state中的数据："><span class="nav-number">5.1.</span> <span class="nav-text">在组件中直接使用了state中的数据：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过-getters获得计算后的值："><span class="nav-number">5.2.</span> <span class="nav-text">通过 getters获得计算后的值：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过-mutations-来修改数据"><span class="nav-number">5.3.</span> <span class="nav-text">通过 mutations 来修改数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#action-的使用"><span class="nav-number">5.4.</span> <span class="nav-text">action 的使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-mutations-和-action-来进行修改数据的区别"><span class="nav-number">6.</span> <span class="nav-text">使用 mutations 和 action 来进行修改数据的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-mapState-、mapGetters-、-mapMutations"><span class="nav-number">7.</span> <span class="nav-text">使用 mapState 、mapGetters 、 mapMutations</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mapState-辅助函数"><span class="nav-number">7.1.</span> <span class="nav-text">mapState 辅助函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mapState-辅助函数-1"><span class="nav-number">7.2.</span> <span class="nav-text">mapState 辅助函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mapMutations-辅助函数"><span class="nav-number">7.3.</span> <span class="nav-text">mapMutations  辅助函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -759,7 +775,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共109.4k字</span>
+  <span class="post-count">博客全站共112.3k字</span>
 </div>-->
 
         
