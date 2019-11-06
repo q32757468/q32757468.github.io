@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JS,">
 
 
 
@@ -82,17 +82,18 @@
 
 
 <meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这几天在学习过程中遇到一些问题，在找相关资料的情况下了解到js单线程和事件循环机制的一些知识，通过看一些大牛的文章，感觉又学习到了很多，对js有了更深的理解，这里来记录一下我学习完之后的一些理解。">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="简单理解js单线程异步与事件循环机制">
+<meta property="og:title" content="理解js单线程异步与事件循环机制">
 <meta property="og:url" content="https://q32757468.github.io/2019/07/06/关于js单线程异步与事件循环机制的学习/index.html">
 <meta property="og:site_name" content="ranshan丶">
 <meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这几天在学习过程中遇到一些问题，在找相关资料的情况下了解到js单线程和事件循环机制的一些知识，通过看一些大牛的文章，感觉又学习到了很多，对js有了更深的理解，这里来记录一下我学习完之后的一些理解。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://image-static.segmentfault.com/208/433/2084336019-5a65972413011">
 <meta property="og:image" content="https://segmentfault.com/img/remote/1460000012925884?w=636&h=518">
-<meta property="og:updated_time" content="2019-07-07T05:14:45.323Z">
+<meta property="og:updated_time" content="2019-10-18T08:51:05.719Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="简单理解js单线程异步与事件循环机制">
+<meta name="twitter:title" content="理解js单线程异步与事件循环机制">
 <meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这几天在学习过程中遇到一些问题，在找相关资料的情况下了解到js单线程和事件循环机制的一些知识，通过看一些大牛的文章，感觉又学习到了很多，对js有了更深的理解，这里来记录一下我学习完之后的一些理解。">
 <meta name="twitter:image" content="https://image-static.segmentfault.com/208/433/2084336019-5a65972413011">
 
@@ -140,7 +141,7 @@
   </script>
 
 
-  <title>简单理解js单线程异步与事件循环机制 | ranshan丶</title>
+  <title>理解js单线程异步与事件循环机制 | ranshan丶</title>
   
 
 
@@ -331,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">简单理解js单线程异步与事件循环机制</h1>
+          <h1 class="post-title" itemprop="name headline">理解js单线程异步与事件循环机制</h1>
         
 
         <div class="post-meta">
@@ -528,6 +529,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"><i class="fa fa-tag"></i> JS</a>
+          
+        </div>
+      
 
       
       
@@ -661,14 +668,32 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">84</span>
+                  <span class="site-state-item-count">85</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -795,7 +820,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共115.3k字</span>
+  <span class="post-count">博客全站共116.9k字</span>
 </div>-->
 
         

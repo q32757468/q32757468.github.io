@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JS,闭包,">
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;闭包是ECMAScript （JavaScript）最强大的特性之一，但用好闭包的前提是必须理解闭包。学习和理解闭包是十分必要的，这次我学习后对闭包的简单理解。">
+<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;闭包是ECMAScript （JavaScript）最强大的特性之一，但用好闭包的前提是必须理解闭包。第一次接触闭包这个概念肯定不好理解，这篇文章来简单介绍理解一下什么是闭包。">
+<meta name="keywords" content="JS,闭包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="对于闭包函数的简单理解">
 <meta property="og:url" content="https://q32757468.github.io/2019/07/05/对于闭包函数的简单理解/index.html">
 <meta property="og:site_name" content="ranshan丶">
-<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;闭包是ECMAScript （JavaScript）最强大的特性之一，但用好闭包的前提是必须理解闭包。学习和理解闭包是十分必要的，这次我学习后对闭包的简单理解。">
+<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;闭包是ECMAScript （JavaScript）最强大的特性之一，但用好闭包的前提是必须理解闭包。第一次接触闭包这个概念肯定不好理解，这篇文章来简单介绍理解一下什么是闭包。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-10T02:58:49.912Z">
+<meta property="og:updated_time" content="2019-11-06T04:30:18.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对于闭包函数的简单理解">
-<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;闭包是ECMAScript （JavaScript）最强大的特性之一，但用好闭包的前提是必须理解闭包。学习和理解闭包是十分必要的，这次我学习后对闭包的简单理解。">
+<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;闭包是ECMAScript （JavaScript）最强大的特性之一，但用好闭包的前提是必须理解闭包。第一次接触闭包这个概念肯定不好理解，这篇文章来简单介绍理解一下什么是闭包。">
 
 
 
@@ -379,7 +380,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  813
+                  822
                 </span>
               
 
@@ -417,14 +418,14 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;闭包是ECMAScript （JavaScript）最强大的特性之一，但用好闭包的前提是必须理解闭包。学习和理解闭包是十分必要的，这次我学习后对闭包的简单理解。<br><a id="more"></a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;闭包是ECMAScript （JavaScript）最强大的特性之一，但用好闭包的前提是必须理解闭包。第一次接触闭包这个概念肯定不好理解，这篇文章来简单介绍理解一下什么是闭包。<br><a id="more"></a></p>
 </blockquote>
 <h3 id="什么是闭包"><a href="#什么是闭包" class="headerlink" title="什么是闭包"></a>什么是闭包</h3><ul>
 <li><p>什么是闭包，通过我的理解就是由于js的机制，外部函数无法使用内部函数的变量，但是内部函数可以使用外部函数的变量，当这样一个使用了外部函数的变量的内部函数在包含他的外部函数之外被调用了，那么就形成了闭包。</p>
 </li>
 <li><p>可以看出要形成闭包至少要这几个条件：</p>
 <ul>
-<li>至少两个函数，一个内部函数，一个嵌套在外部函数里面的内部函数</li>
+<li>至少两个函数，一个外部部函数，一个嵌套在外部函数里面的内部函数</li>
 <li>内部函数中使用了外部函数中的变量</li>
 <li>在外部函数以外的地方调用了内部函数</li>
 </ul>
@@ -471,6 +472,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"><i class="fa fa-tag"></i> JS</a>
+          
+            <a href="/tags/闭包/" rel="tag"><i class="fa fa-tag"></i> 闭包</a>
+          
+        </div>
       
 
       
@@ -605,14 +614,32 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">84</span>
+                  <span class="site-state-item-count">85</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -739,7 +766,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共115.3k字</span>
+  <span class="post-count">博客全站共116.9k字</span>
 </div>-->
 
         

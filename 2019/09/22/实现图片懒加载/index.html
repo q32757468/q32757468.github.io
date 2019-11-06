@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JS,">
 
 
 
@@ -82,13 +82,14 @@
 
 
 <meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;图片懒加载是网页中常见的一种简单的技术，可以减轻页面首次加载的压力，是一种常见的页面性能优化的方式，这次就来看看它的究竟是如何实现的。">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实现图片懒加载">
 <meta property="og:url" content="https://q32757468.github.io/2019/09/22/实现图片懒加载/index.html">
 <meta property="og:site_name" content="ranshan丶">
 <meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;图片懒加载是网页中常见的一种简单的技术，可以减轻页面首次加载的压力，是一种常见的页面性能优化的方式，这次就来看看它的究竟是如何实现的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-22T02:42:09.888Z">
+<meta property="og:updated_time" content="2019-09-24T11:12:20.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现图片懒加载">
 <meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;图片懒加载是网页中常见的一种简单的技术，可以减轻页面首次加载的压力，是一种常见的页面性能优化的方式，这次就来看看它的究竟是如何实现的。">
@@ -379,7 +380,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  661
+                  684
                 </span>
               
 
@@ -424,6 +425,7 @@
 <p>css:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.imgList</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 进入页面时也需要调用一次</span></span><br><span class="line">  start();</span><br><span class="line"></span><br><span class="line">  <span class="comment">//当页面滚动时触发</span></span><br><span class="line">  $(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">// 滚动时，显示对应图片</span></span><br><span class="line">    start()</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">//判断图片是否需要显示</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">isShow</span>(<span class="params">$node</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> $node.offset().top &lt;= $(<span class="built_in">window</span>).height() + $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 显示图片</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">loadImg</span>(<span class="params">$img</span>) </span>&#123;</span><br><span class="line">    $img.attr(<span class="string">'src'</span>, $img.attr(<span class="string">'data-src'</span>));</span><br><span class="line">    $img.attr(<span class="string">'data-isLoaded'</span>, <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//调用图片懒加载</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">start</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">'.imgList img'</span>).not(<span class="string">'[data-isLoaded]'</span>).each(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">const</span> $node = $(<span class="keyword">this</span>);</span><br><span class="line">      <span class="keyword">if</span> (isShow($node)) &#123;</span><br><span class="line">        loadImg($node);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>图片懒加载是一个常见的简单又实用的一个小功能。</p>
+<p>这里也可以再通过函数节流来对性能进行一定的优化</p>
 
       
     </div>
@@ -449,6 +451,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"><i class="fa fa-tag"></i> JS</a>
+          
+        </div>
       
 
       
@@ -583,14 +591,32 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">84</span>
+                  <span class="site-state-item-count">85</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -717,7 +743,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共115.3k字</span>
+  <span class="post-count">博客全站共116.9k字</span>
 </div>-->
 
         

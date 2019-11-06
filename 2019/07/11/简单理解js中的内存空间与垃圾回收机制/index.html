@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JS,">
 
 
 
@@ -82,17 +82,18 @@
 
 
 <meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;想要更加的了解js就需要对它的运作机制有更加深入的了解，这次来了解以下js的内存空间与垃圾回收机制，通过理解这两个概念对我们的开发十分有帮助。">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="简单理解js中的内存空间与垃圾回收">
+<meta property="og:title" content="理解js中的内存空间与垃圾回收">
 <meta property="og:url" content="https://q32757468.github.io/2019/07/11/简单理解js中的内存空间与垃圾回收机制/index.html">
 <meta property="og:site_name" content="ranshan丶">
 <meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;想要更加的了解js就需要对它的运作机制有更加深入的了解，这次来了解以下js的内存空间与垃圾回收机制，通过理解这两个概念对我们的开发十分有帮助。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/z*R*IeVf8ofKH3UImPKBD2VQgzyGlwQ5Sz8lcpBZPgc!/b/dLsAAAAAAAAA&bo=NgEUAgAAAAADBwM!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/WeIMtcs*I.Iyfd6yw*nID7ZWqUtzAUsGG2vMMsDBERo!/b/dFMBAAAAAAAA&bo=OQPVAQAAAAADF9w!&rf=viewer_4">
-<meta property="og:updated_time" content="2019-07-11T10:09:53.087Z">
+<meta property="og:updated_time" content="2019-10-18T08:51:21.316Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="简单理解js中的内存空间与垃圾回收">
+<meta name="twitter:title" content="理解js中的内存空间与垃圾回收">
 <meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;想要更加的了解js就需要对它的运作机制有更加深入的了解，这次来了解以下js的内存空间与垃圾回收机制，通过理解这两个概念对我们的开发十分有帮助。">
 <meta name="twitter:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/z*R*IeVf8ofKH3UImPKBD2VQgzyGlwQ5Sz8lcpBZPgc!/b/dLsAAAAAAAAA&bo=NgEUAgAAAAADBwM!&rf=viewer_4">
 
@@ -140,7 +141,7 @@
   </script>
 
 
-  <title>简单理解js中的内存空间与垃圾回收 | ranshan丶</title>
+  <title>理解js中的内存空间与垃圾回收 | ranshan丶</title>
   
 
 
@@ -331,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">简单理解js中的内存空间与垃圾回收</h1>
+          <h1 class="post-title" itemprop="name headline">理解js中的内存空间与垃圾回收</h1>
         
 
         <div class="post-meta">
@@ -496,6 +497,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"><i class="fa fa-tag"></i> JS</a>
+          
+        </div>
+      
 
       
       
@@ -629,14 +636,32 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">84</span>
+                  <span class="site-state-item-count">85</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -763,7 +788,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共115.3k字</span>
+  <span class="post-count">博客全站共116.9k字</span>
 </div>-->
 
         
