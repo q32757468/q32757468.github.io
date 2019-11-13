@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="ranshan丶">
 <meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这篇博客经过不断更新就成了现在的版本，最开始学习cookie的时候并没有用cookie具体来实现什么功能，虽然那个时候有思路，但并没有做出来，而经过这么长的时间我已经通过cookie来实现了一个简单的登录功能以及掌握了cookie的更多使用方式，来记录一下。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-24T11:02:57.521Z">
+<meta property="og:updated_time" content="2019-11-13T05:33:25.619Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cookie的学习以及使用">
 <meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这篇博客经过不断更新就成了现在的版本，最开始学习cookie的时候并没有用cookie具体来实现什么功能，虽然那个时候有思路，但并没有做出来，而经过这么长的时间我已经通过cookie来实现了一个简单的登录功能以及掌握了cookie的更多使用方式，来记录一下。">
@@ -432,6 +432,11 @@
 </li>
 </ul>
 <h3 id="封装cookie的一些方法"><a href="#封装cookie的一些方法" class="headerlink" title="封装cookie的一些方法"></a>封装cookie的一些方法</h3><p>如果不封装方法的，直接获取cookie中我们想要的值还是有一些麻烦的，还有删除一条cookie也是一样，所以这里学习别人封装的两个方法来帮助我们简化操作。</p>
+<ul>
+<li>创建一条cookie<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>虽然本身创建一条cookie使很简单的，但是封装一下能够使调用起来更加的方便明了。</p>
 <ul>
 <li>获取我们想要的cookie<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCookie</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> strcookie = <span class="built_in">document</span>.cookie; <span class="comment">//获取cookie字符串</span></span><br><span class="line">                <span class="keyword">var</span> arrcookie = strcookie.split(<span class="string">"; "</span>); <span class="comment">//分割</span></span><br><span class="line">                <span class="comment">//遍历匹配</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arrcookie.length; i++) &#123;</span><br><span class="line">                    <span class="keyword">var</span> arr = arrcookie[i].split(<span class="string">"="</span>);</span><br><span class="line">                    <span class="keyword">if</span> (arr[<span class="number">0</span>] == name) &#123;</span><br><span class="line">                        <span class="keyword">return</span> arr[<span class="number">1</span>];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
 </li>
