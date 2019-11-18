@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;执行环境（execution context）也有翻译为执行上下文，这是JS中非常基础但是也非常重要的一个概念，通过理解执行环境我们可以更加了解js的运作机制。">
+<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;执行环境（execution context）也有翻译为执行上下文，这是JS中非常基础但是也非常重要的一个概念，通过理解执行环境我们可以更加了解js的运作机制。这篇文章就来简单理解一下什么是执行环境，以及它究竟是怎么样运作的。">
 <meta name="keywords" content="JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="理解JS中的执行环境">
 <meta property="og:url" content="https://q32757468.github.io/2019/07/21/理解JS中的执行环境/index.html">
 <meta property="og:site_name" content="ranshan丶">
-<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;执行环境（execution context）也有翻译为执行上下文，这是JS中非常基础但是也非常重要的一个概念，通过理解执行环境我们可以更加了解js的运作机制。">
+<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;执行环境（execution context）也有翻译为执行上下文，这是JS中非常基础但是也非常重要的一个概念，通过理解执行环境我们可以更加了解js的运作机制。这篇文章就来简单理解一下什么是执行环境，以及它究竟是怎么样运作的。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/zfAwo9zxnj2TpvYz6yNVcFum7BaXmPIokG4SckB0snM!/b/dLYAAAAAAAAA&bo=WgQtAgAAAAADB1M!&rf=viewer_4">
-<meta property="og:updated_time" content="2019-11-13T07:33:37.946Z">
+<meta property="og:updated_time" content="2019-11-17T07:26:23.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="理解JS中的执行环境">
-<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;执行环境（execution context）也有翻译为执行上下文，这是JS中非常基础但是也非常重要的一个概念，通过理解执行环境我们可以更加了解js的运作机制。">
+<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;执行环境（execution context）也有翻译为执行上下文，这是JS中非常基础但是也非常重要的一个概念，通过理解执行环境我们可以更加了解js的运作机制。这篇文章就来简单理解一下什么是执行环境，以及它究竟是怎么样运作的。">
 <meta name="twitter:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/zfAwo9zxnj2TpvYz6yNVcFum7BaXmPIokG4SckB0snM!/b/dLYAAAAAAAAA&bo=WgQtAgAAAAADB1M!&rf=viewer_4">
 
 
@@ -420,7 +420,7 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行环境（execution context）也有翻译为执行上下文，这是JS中非常基础但是也非常重要的一个概念，通过理解执行环境我们可以更加了解js的运作机制。<br><a id="more"></a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行环境（execution context）也有翻译为执行上下文，这是JS中非常基础但是也非常重要的一个概念，通过理解执行环境我们可以更加了解js的运作机制。这篇文章就来简单理解一下什么是执行环境，以及它究竟是怎么样运作的。<br><a id="more"></a></p>
 </blockquote>
 <h3 id="什么是执行环境"><a href="#什么是执行环境" class="headerlink" title="什么是执行环境"></a>什么是执行环境</h3><p><strong>执行环境</strong>定义了变量或函数有权访问的其他数据，决定了它们各自的行为。这是高级编程中的一句话。</p>
 <p>说简单点理解，<strong>执行环境</strong>其实就是一个环境，在这个环境中保存了一些重要的数据。</p>
@@ -449,7 +449,7 @@
 </ul>
 <h3 id="执行环境中的内容"><a href="#执行环境中的内容" class="headerlink" title="执行环境中的内容"></a>执行环境中的内容</h3><p>前面也提到了执行环境其实就是一个环境，其中保存了重要的数据，那么究竟保存的是什么数据呢？</p>
 <ul>
-<li><p>首先执行环境中很重要的一部分就是<strong>变量对象</strong>，在执行环境的创建时就会建立活动对象。</p>
+<li><p>首先执行环境中很重要的一部分就是<strong>变量对象</strong>，变量对象将包含当前函数中的许多重要信息。</p>
 </li>
 <li><p>执行环境中还保存了<strong>作用域链</strong>，当代码在一个环境中执行时，会创建变量对象的一个作用域链。</p>
 </li>
@@ -624,7 +624,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">85</span>
+                  <span class="site-state-item-count">86</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -776,7 +776,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共117k字</span>
+  <span class="post-count">博客全站共117.9k字</span>
 </div>-->
 
         
