@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;之前有提到过JS中的执行环境(执行上下文)是JS中非常重要的一个概念，而前面也提到了执行环境当中主要包含了三部分：变量对象、作用域链、this指向，这里这里就来更为详细的介绍一下变量对象究竟是什么。">
+<meta name="description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;之前有提到过JS中的执行环境(执行上下文)是JS中非常重要的一个概念，而前面也提到了执行环境当中主要包含了三部分：变量对象、作用域链、this指向，这里这里就承接前面，来更为详细的介绍一下变量对象究竟是什么。">
 <meta name="keywords" content="JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="理解JS中的变量对象">
 <meta property="og:url" content="https://q32757468.github.io/2019/11/17/理解JS中的变量对象/index.html">
 <meta property="og:site_name" content="ranshan丶">
-<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;之前有提到过JS中的执行环境(执行上下文)是JS中非常重要的一个概念，而前面也提到了执行环境当中主要包含了三部分：变量对象、作用域链、this指向，这里这里就来更为详细的介绍一下变量对象究竟是什么。">
+<meta property="og:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;之前有提到过JS中的执行环境(执行上下文)是JS中非常重要的一个概念，而前面也提到了执行环境当中主要包含了三部分：变量对象、作用域链、this指向，这里这里就承接前面，来更为详细的介绍一下变量对象究竟是什么。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/Vu6gV1Td2WaxipoMlZ1h2RlOcJrnA8Nakzs6C6.O9WA!/b/dL8AAAAAAAAA&bo=zgAiAAAAAAADB84!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/HJiG3aBIXl0FkFaw2*o.U3k2fVk559YTQrjTJX**V00!/b/dFQBAAAAAAAA&bo=sgI4AAAAAAADB6o!&rf=viewer_4">
-<meta property="og:updated_time" content="2019-11-17T07:48:34.561Z">
+<meta property="og:updated_time" content="2019-11-18T08:45:42.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="理解JS中的变量对象">
-<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;之前有提到过JS中的执行环境(执行上下文)是JS中非常重要的一个概念，而前面也提到了执行环境当中主要包含了三部分：变量对象、作用域链、this指向，这里这里就来更为详细的介绍一下变量对象究竟是什么。">
+<meta name="twitter:description" content="前言 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;之前有提到过JS中的执行环境(执行上下文)是JS中非常重要的一个概念，而前面也提到了执行环境当中主要包含了三部分：变量对象、作用域链、this指向，这里这里就承接前面，来更为详细的介绍一下变量对象究竟是什么。">
 <meta name="twitter:image" content="http://m.qpic.cn/psb?/V131x4904WMIoW/Vu6gV1Td2WaxipoMlZ1h2RlOcJrnA8Nakzs6C6.O9WA!/b/dL8AAAAAAAAA&bo=zgAiAAAAAAADB84!&rf=viewer_4">
 
 
@@ -383,7 +383,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  880
+                  884
                 </span>
               
 
@@ -421,7 +421,7 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;之前有提到过JS中的执行环境(执行上下文)是JS中非常重要的一个概念，而前面也提到了执行环境当中主要包含了三部分：变量对象、作用域链、this指向，这里这里就来更为详细的介绍一下变量对象究竟是什么。<br><a id="more"></a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;之前有提到过JS中的执行环境(执行上下文)是JS中非常重要的一个概念，而前面也提到了执行环境当中主要包含了三部分：变量对象、作用域链、this指向，这里这里就承接前面，来更为详细的介绍一下变量对象究竟是什么。<br><a id="more"></a></p>
 </blockquote>
 <h3 id="变量什么时候被的创建"><a href="#变量什么时候被的创建" class="headerlink" title="变量什么时候被的创建"></a>变量什么时候被的创建</h3><p>变量对象的创建时机非常好理解：</p>
 <p>当前函数<strong>被调用但还未执行</strong>之时变量对象就在当前执行环境中被创建了。</p>
@@ -502,6 +502,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/18/理解JS中的作用域链/" rel="prev" title="理解JS中的作用域链">
+                理解JS中的作用域链 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -613,7 +617,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">86</span>
+                  <span class="site-state-item-count">89</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -765,7 +769,7 @@ var jiathis_config={
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共117.9k字</span>
+  <span class="post-count">博客全站共123k字</span>
 </div>-->
 
         
