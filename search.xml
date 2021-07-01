@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[解决新版浏览器提示禁用开发人员模式扩展的问题]]></title>
+    <url>%2F2021%2F07%2F01%2F%E8%A7%A3%E5%86%B3%E6%96%B0%E7%89%88edge%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%90%E7%A4%BA%E7%A6%81%E7%94%A8%E5%BC%80%E5%8F%91%E8%80%85%E6%89%A9%E5%B1%95%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[前言 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在默认情况下 Chromium 内核的浏览器在通过解压缩文件夹的方式安装扩展后，在每次打开浏览器时都会提示“禁用开发人员模式扩展”，包括新版 edge、chrome 等等，这个弹窗还会使浏览器强行切换焦点，可能导致打字过程中突然失去焦点然后中断，体验极其糟糕，并且需要手动关闭该提示，针对这一问题网上也有许多的解决方案，这篇文章记录一下 edge 浏览器通过修改策略组来解决这一问题的一种较为实用的方案，chrome 浏览器同理。 常见解决方案换用 dev 版本这是一个比较简单便捷的方案，我最初也是选择了这个方案，使用 dev 版本的 edge 作为平常的主力浏览器使用，但是随后发现较多的问题，使用过程中存在较多的 bug，使用体验并不好，并不适合日常的开发调试。 使用火绒进行弹窗拦截这个也是一个简单粗暴的解决方案，但是火绒对于我来说我并不想没事的时候再运行一个火绒，所以这个方案对我来说也不适合。 使用补丁网上还有一种常见的解决方案就是使用相关的补丁，这个方法相较于前两种更为复杂，并且不适用于任意版本的浏览器，随着浏览器版本的更新，该方法会失效，并且这个办法会导致一个问题，浏览器将变得无法检查更新，所以放弃。 修改策略组下载模板因为要使用策略组编辑器进行相关设置，所以需要先下载模板，edge 的模板可以从这里下载:下载地址:https://www.microsoft.com/zh-cn/edge/business/download 选择好相应版本，点击获取政策文件下载即可，下载完毕后得到一个 cab 格式的压缩包，解压后获取 windows/adm/zh-CN 下的 amd 文件，这个就是稍后要用到的模板文件。 编辑本地策略组 打开本地策略组编辑器 右键管理模板-添加/删除模板-添加，选择之前得到的 amd 文件 返回到管理模板这一层,这时可以看到右侧多了一个“经典管理模板(ADM)”,进入 选择 Microsoft Edge-拓展-允许安装特定拓展,设置成已启用 点击阻止名单中免除的 ID 旁边的显示,将需要安装的扩展的 id 复制进去就完成了 重启浏览器 安装扩展需要注意的是,上述方案需要通过 crx 的方式来安装扩展,也就是将扩展打包成 crx 文件,然后拖进浏览器内进行安装,需要再上述操作完成后再安装扩展才能生效,安装新的扩展时重复上述步骤即可]]></content>
+      <categories>
+        <category>问题解决</category>
+        <category>浏览器</category>
+      </categories>
+      <tags>
+        <tag>chrome</tag>
+        <tag>edge</tag>
+        <tag>策略组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[常用小API列表]]></title>
     <url>%2F2020%2F12%2F14%2F%E5%B8%B8%E7%94%A8%E5%B0%8FAPI%E5%88%97%E8%A1%A8%2F</url>
     <content type="text"><![CDATA[获取网站图标 API https://api.qqsuu.cn/api/favicon/get.php?url=https://www.baidu.com http://favicon.cccyun.cc/https://www.baidu.com 经过测试第一个接口的速度更快一些，且是 https，安全性更佳，优先考虑使用第一个接口。]]></content>
